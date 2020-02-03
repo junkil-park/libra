@@ -1,0 +1,60 @@
+name: Test_Move_Prover
+
+on:
+  repository_dispatch:
+    types: [opened, synchronize]
+
+jobs:
+  install_and_test_Move_Prover:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Z3
+      uses: pavpanchekha/setup-z3@v1.2
+
+    - name: Install .NET Core SDK
+      run:
+        sudo apt-get update
+        sudo apt-get install apt-transport-https
+        sudo apt-get update
+        sudo apt-get install dotnet-sdk-3.1
+
+    - name: Install Boogie
+      run:
+        dotnet tool install --global Boogie
+
+    - name: Export the environment variables for Z3 and Boogie
+      run:
+        export Z3_EXE=$(which z3)
+        export BOOGIE_EXE=$(which boogie)
+
+
+
+
+    - name: Checkout libra
+      uses: actions/checkout@v2
+      with:
+        path: 'libra'
+        fetch-depth: 50 # this is to make sure we obtain the target base commit
+    # github base_ref is a lie, we obtain the target base the hard way
+    - name: Obtain base reference
+      id: obtain_base_ref
+      uses: actions/github-script@0.4.0
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        result-encoding: string
+        script: |
+          const commits = await github.pulls.listCommits({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.payload.pull_request.number,
+          });
+          return commits.data[0].parents[0].sha;
+
+
+
+
+    - name: Test move-prover
+      working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      run: cargo test
