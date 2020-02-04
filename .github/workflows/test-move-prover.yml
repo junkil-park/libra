@@ -2,7 +2,7 @@ name: Test_Move_Prover
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, reopened, synchronize]
 
 jobs:
   install_and_test_Move_Prover:
@@ -28,6 +28,13 @@ jobs:
       run: |
         echo "::set-env name=Z3_EXE::$(which z3)"
         echo "::set-env name=BOOGIE_EXE::$(which boogie)"
+
+    - name: Echo the environment variables
+      run: |
+        echo $Z3_EXE
+        echo $BOOGIE_EXE
+        which z3
+        which boogie
 
     - name: Checkout libra
       uses: actions/checkout@v2
