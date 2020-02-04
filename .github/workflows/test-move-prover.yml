@@ -27,7 +27,7 @@ jobs:
     - name : Install Boogie
       run: |
         sudo apt-get update
-        sudo apt-get install boogie
+        sudo apt-get install boogie=2.4.1+dfsg-0.1
 
     # - name: Run Boogie
     #   run: |
