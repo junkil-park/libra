@@ -24,21 +24,6 @@ jobs:
       run: |
         dotnet tool install --global Boogie
 
-    # - name : Install Boogie
-    #   run: |
-    #     sudo apt-get update
-    #     sudo apt-get install boogie=2.4.1+dfsg-0.1
-    #     sudo apt-get install boogie
-
-    # - name: Run Boogie
-    #   run: |
-    #     source ~/.bashrc
-    #     boogie
-
-    # - name: Run Boogie
-    #   run: |
-    #     /home/runner/.dotnet/tools/boogie
-
     - name: Export the environment variable for Boogie
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
@@ -52,7 +37,7 @@ jobs:
       with:
         path: 'libra'
 
-
     - name: Test move-prover
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      timeout-minutes: 3
       run: cargo test
