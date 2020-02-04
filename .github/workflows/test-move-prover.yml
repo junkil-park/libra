@@ -24,6 +24,10 @@ jobs:
       run: |
         dotnet tool install --global Boogie
 
+    - name: Run Boogie
+      run: |
+        boogie
+
     - name: Export the environment variable for Boogie
       run: |
         echo "::set-env name=BOOGIE_EXE::`which boogie`"
