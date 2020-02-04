@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Echo $HOME
-    #   run: |
-    #     echo $HOME
-
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
 
@@ -32,6 +28,7 @@ jobs:
     #   run: |
     #     sudo apt-get update
     #     sudo apt-get install boogie=2.4.1+dfsg-0.1
+    #     sudo apt-get install boogie
 
     # - name: Run Boogie
     #   run: |
@@ -49,13 +46,6 @@ jobs:
     - name: Export the environment variable for Z3
       run: |
         echo "::set-env name=Z3_EXE::`which z3`"
-
-    # - name: Echo the environment variables
-    #   run: |
-    #     echo $Z3_EXE
-    #     echo $BOOGIE_EXE
-    #     which z3
-    #     which boogie
 
     - name: Checkout libra
       uses: actions/checkout@v2
