@@ -40,7 +40,7 @@ jobs:
 
     - name: Run Boogie
       run: |
-        /.dotnet/tools/boogie
+        /home/runner/.dotnet/tools/boogie
 
     - name: Export the environment variable for Boogie
       run: |
