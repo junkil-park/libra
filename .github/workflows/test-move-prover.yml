@@ -34,9 +34,13 @@ jobs:
     #     source ~/.bashrc
     #     boogie
 
+    - name: Run Boogie
+      run: |
+        /.dotnet/tools/boogie
+
     - name: Export the environment variable for Boogie
       run: |
-        echo "::set-env name=BOOGIE_EXE::~/.dotnet/tools/boogie"
+        echo "::set-env name=BOOGIE_EXE::/.dotnet/tools/boogie"
 
     - name: Export the environment variable for Z3
       run: |
