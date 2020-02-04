@@ -26,11 +26,8 @@ jobs:
 
     - name: Export the environment variables for Z3 and Boogie
       run: |
-        export Z3_EXE=$(which z3)
-        export BOOGIE_EXE=$(which boogie)
-
-
-
+        echo "::set-env name=Z3_EXE::$(which z3)"
+        echo "::set-env name=BOOGIE_EXE::$(which boogie)"
 
     - name: Checkout libra
       uses: actions/checkout@v2
