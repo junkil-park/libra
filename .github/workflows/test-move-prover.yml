@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Echo hom
+      run: |
+        echo $HOME
+
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
 
