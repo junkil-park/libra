@@ -13,26 +13,26 @@ jobs:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
 
-    - name: Install .NET Core SDK
-      run: |
-        sudo apt-get update
-        sudo apt-get install apt-transport-https
-        sudo apt-get update
-        sudo apt-get install dotnet-sdk-3.1
-
-    - name: Install Boogie
-      run: |
-        dotnet tool install --global Boogie
-
-    # - name : Install Boogie
+    # - name: Install .NET Core SDK
     #   run: |
     #     sudo apt-get update
-    #     sudo apt-get install boogie
+    #     sudo apt-get install apt-transport-https
+    #     sudo apt-get update
+    #     sudo apt-get install dotnet-sdk-3.1
 
-    - name: Run Boogie
+    # - name: Install Boogie
+    #   run: |
+    #     dotnet tool install --global Boogie
+
+    - name : Install Boogie
       run: |
-        source ~/.bashrc
-        boogie
+        sudo apt-get update
+        sudo apt-get install boogie
+
+    # - name: Run Boogie
+    #   run: |
+    #     source ~/.bashrc
+    #     boogie
 
     - name: Export the environment variable for Boogie
       run: |
@@ -42,12 +42,12 @@ jobs:
       run: |
         echo "::set-env name=Z3_EXE::`which z3`"
 
-    - name: Echo the environment variables
-      run: |
-        echo $Z3_EXE
-        echo $BOOGIE_EXE
-        which z3
-        which boogie
+    # - name: Echo the environment variables
+    #   run: |
+    #     echo $Z3_EXE
+    #     echo $BOOGIE_EXE
+    #     which z3
+    #     which boogie
 
     - name: Checkout libra
       uses: actions/checkout@v2
