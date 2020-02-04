@@ -13,21 +13,21 @@ jobs:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
 
-    # - name: Install .NET Core SDK
-    #   run: |
-    #     sudo apt-get update
-    #     sudo apt-get install apt-transport-https
-    #     sudo apt-get update
-    #     sudo apt-get install dotnet-sdk-3.1
-
-    # - name: Install Boogie
-    #   run: |
-    #     dotnet tool install --global Boogie
-
-    - name : Install Boogie
+    - name: Install .NET Core SDK
       run: |
         sudo apt-get update
-        sudo apt-get install boogie=2.4.1+dfsg-0.1
+        sudo apt-get install apt-transport-https
+        sudo apt-get update
+        sudo apt-get install dotnet-sdk-3.1
+
+    - name: Install Boogie
+      run: |
+        dotnet tool install --global Boogie
+
+    # - name : Install Boogie
+    #   run: |
+    #     sudo apt-get update
+    #     sudo apt-get install boogie=2.4.1+dfsg-0.1
 
     # - name: Run Boogie
     #   run: |
@@ -36,7 +36,7 @@ jobs:
 
     - name: Export the environment variable for Boogie
       run: |
-        echo "::set-env name=BOOGIE_EXE::`which boogie`"
+        echo "::set-env name=BOOGIE_EXE::~/.dotnet/tools/boogie"
 
     - name: Export the environment variable for Z3
       run: |
