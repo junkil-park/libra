@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Echo hom
-      run: |
-        echo $HOME
+    # - name: Echo $HOME
+    #   run: |
+    #     echo $HOME
 
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
@@ -38,13 +38,13 @@ jobs:
     #     source ~/.bashrc
     #     boogie
 
-    - name: Run Boogie
-      run: |
-        /home/runner/.dotnet/tools/boogie
+    # - name: Run Boogie
+    #   run: |
+    #     /home/runner/.dotnet/tools/boogie
 
     - name: Export the environment variable for Boogie
       run: |
-        echo "::set-env name=BOOGIE_EXE::/.dotnet/tools/boogie"
+        echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
 
     - name: Export the environment variable for Z3
       run: |
