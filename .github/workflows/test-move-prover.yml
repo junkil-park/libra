@@ -24,9 +24,11 @@ jobs:
       run: |
         dotnet tool install --global Boogie
 
-    - name: Export the environment variables for Z3 and Boogie
+    - name: Export the environment variable for Z3
       run: |
         echo "::set-env name=Z3_EXE::`which z3`"
+
+    - name: Export the environment variable for Boogie
         echo "::set-env name=BOOGIE_EXE::`which boogie`"
 
     - name: Echo the environment variables
