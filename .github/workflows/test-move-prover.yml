@@ -1,10 +1,10 @@
 name: Test_Move_Prover
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
-  #repository_dispatch:
-  #  types: [new_PR]
+  # pull_request:
+  #   types: [opened, reopened, synchronize]
+  repository_dispatch:
+   types: [new_PR]
 
 jobs:
   install_and_test_Move_Prover:
@@ -22,6 +22,7 @@ jobs:
         sudo apt-get install dotnet-sdk-3.1
         dotnet tool install --global Boogie
     - name: Export the environment variables
+      run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
         echo "::set-env name=Z3_EXE::`which z3`"
     - name: Checkout libra
