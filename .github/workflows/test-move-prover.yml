@@ -1,8 +1,8 @@
 name: Test_Move_Prover
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  repository_dispatch:
+    types: [new_PR]
 
 jobs:
   install_and_test_Move_Prover:
@@ -12,31 +12,23 @@ jobs:
     steps:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
-
-    - name: Install .NET Core SDK
+    - name: Install .NET Core SDK and Boogie
       run: |
         sudo apt-get update
         sudo apt-get install apt-transport-https
         sudo apt-get update
         sudo apt-get install dotnet-sdk-3.1
-
-    - name: Install Boogie
-      run: |
         dotnet tool install --global Boogie
-
-    - name: Export the environment variable for Boogie
-      run: |
+    - name: Export the environment variables
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
-
-    - name: Export the environment variable for Z3
-      run: |
         echo "::set-env name=Z3_EXE::`which z3`"
-
     - name: Checkout libra
       uses: actions/checkout@v2
       with:
         path: 'libra'
-
+    - name: Build move-prover
+      working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      run: cargo build
     - name: Test move-prover
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       timeout-minutes: 30 # normally, expected to be done within 10 mins.
