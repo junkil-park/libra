@@ -1,6 +1,8 @@
 name: Test_Move_Prover
 
 on:
+  pull_request:
+    types: [opened, reopened, synchronize]
   repository_dispatch:
     types: [new_PR]
 
