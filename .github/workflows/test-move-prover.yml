@@ -27,8 +27,6 @@ jobs:
         dotnet tool install --global Boogie
     - name: Test
       run: |
-        which boogie
-        /home/runner/.dotnet/tools/boogie
         ls /home/runner/.dotnet/tools
     - name: Export the environment variables
       run: |
