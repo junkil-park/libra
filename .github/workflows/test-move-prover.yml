@@ -9,17 +9,17 @@ on:
 jobs:
   install_and_test_Move_Prover:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
     - name: Install .NET Core SDK and Boogie 1
       run: |
-        wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    - name: Install .NET Core SDK and Boogie 2
+        wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+      - name: Install .NET Core SDK and Boogie 2
       run: |
-        yes no | sudo dpkg -i packages-microsoft-prod.deb
+        sudo dpkg -i packages-microsoft-prod.deb
         sudo apt-get update
         sudo apt-get install apt-transport-https
         sudo apt-get update
