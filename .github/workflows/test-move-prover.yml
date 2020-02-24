@@ -15,7 +15,7 @@ jobs:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
       with:
-        version: "4.5.0"
+        version: "4.8.1"
     - name: Test
       run: |
         z3 --version
