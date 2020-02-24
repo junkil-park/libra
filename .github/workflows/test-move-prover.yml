@@ -28,10 +28,10 @@ jobs:
     - name: Install .NET Core SDK and Boogie3
       run: |
         dotnet tool install --global Boogie
-    - name: Test
-      run: |
-        ls -al /home/runner/.dotnet/tools
-        /home/runner/.dotnet/tools/boogie
+    # - name: Test
+    #   run: |
+    #     ls -al /home/runner/.dotnet/tools
+    #     /home/runner/.dotnet/tools/boogie
     - name: Export the environment variables
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
