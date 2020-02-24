@@ -14,7 +14,11 @@ jobs:
     steps:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
-    
+      with:
+        version: "4.5.0"
+    - name: Test
+      run: |
+        z3 --version
     - name: Install .NET Core SDK and Boogie1
       run: |
         wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
