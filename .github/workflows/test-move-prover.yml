@@ -14,14 +14,19 @@ jobs:
     steps:
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
-    - name: Install .NET Core SDK and Boogie
+    
+    - name: Install .NET Core SDK and Boogie1
       run: |
         wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
         sudo dpkg -i packages-microsoft-prod.deb
+    - name: Install .NET Core SDK and Boogie2
+      run: |
         sudo apt-get update
         sudo apt-get install apt-transport-https
         sudo apt-get update
         sudo apt-get install dotnet-sdk-3.1
+    - name: Install .NET Core SDK and Boogie3
+      run: |
         dotnet tool install --global Boogie
     - name: Test
       run: |
