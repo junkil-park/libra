@@ -67,13 +67,6 @@ jobs:
       with:
 #        github-token: ${{secrets.MIRAI_BOT}}
         script: |
-          const execSync = require('child_process').execSync;
-          const filenames = execSync('git diff --name-only "origin/master" "HEAD"', { encoding: 'utf-8' });
-          console.log("The files changed:\n${filenames}");
-          if (!filenames.includes('language/move-prover/')) {
-            console.log("This PR has no changes under the directory 'language/move-prover'.");
-            return;
-          }
           const fs = require('fs');
           fs.readFile('cargo_test.log', 'utf-8', (err, data) => {
             if (err) {
@@ -85,7 +78,6 @@ jobs:
               console.log(data);
             }
           }
-
         # github.issues.createComment({
         #   owner: context.repo.owner,
         #   repo: context.repo.repo,
