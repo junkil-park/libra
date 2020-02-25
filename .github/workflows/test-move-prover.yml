@@ -24,8 +24,9 @@ jobs:
         sudo apt-get install apt-transport-https
         sudo apt-get update
         sudo apt-get install dotnet-sdk-3.1
-      #  dotnet tool install --global Boogie --version 2.4.17
         dotnet tool install --global Boogie --version 2.5.7
+
+      #  dotnet tool install --global Boogie --version 2.4.17
     - name: Export the environment variables
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
@@ -65,10 +66,13 @@ jobs:
             if (data) {
               data = "[move-prover] `cargo test` failed with the following error message: \n```${data}```";    
               console.log(data);
+            }
+          }
+
         # github.issues.createComment({
         #   owner: context.repo.owner,
         #   repo: context.repo.repo,
         #   issue_number: context.payload.pull_request.number,
         #   body: data
         # });
-            }
+        #    }
