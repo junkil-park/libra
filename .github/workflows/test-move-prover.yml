@@ -22,6 +22,8 @@ jobs:
       working-directory: /home/runner/work/libra/libra/libra
       #./libra
       run: |
+        git status
+        git log -5
         git diff --name-only master
         git diff --name-only master | grep "language/move-prover"
     - name: Install Z3
