@@ -19,7 +19,8 @@ jobs:
         # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
         # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
     - name: Detect the changes in move-prover
-      working-directory: ./libra
+      working-directory: /home/runner/work/libra/libra/libra
+      #./libra
       run: |
         git diff --name-only master
         git diff --name-only master | grep "language/move-prover"
