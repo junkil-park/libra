@@ -44,6 +44,7 @@ jobs:
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       timeout-minutes: 30 # normally, expected to be done within 10 mins.
       run: cargo test 2>&1 | tee cargo_test.log
+      continue-on-error: true
     - name: Comment the error message if the test failed
       if: failure()
       uses: actions/github-script@0.4.0
