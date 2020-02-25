@@ -21,8 +21,8 @@ jobs:
     - name: Detect the changes in move-prover
       working-directory: ./libra
       run: |
-        git diff --name-only origin
-        git diff --name-only origin | grep "language/move-prover"
+        git diff --name-only master
+        git diff --name-only master | grep "language/move-prover"
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
       with:
