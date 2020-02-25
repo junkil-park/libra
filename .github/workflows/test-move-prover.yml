@@ -12,6 +12,16 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
+    - name: Checkout libra
+      uses: actions/checkout@v2
+      with:
+        path: "libra"
+        # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
+        # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
+    - name: Detect the changes in move-prover
+      run: |
+        git diff --name-only "origin/master" "HEAD"
+        git diff --name-only "origin/master" "HEAD" | grep "language/move-prover"
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
       with:
@@ -31,12 +41,6 @@ jobs:
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
         echo "::set-env name=Z3_EXE::`which z3`"
-    - name: Checkout libra
-      uses: actions/checkout@v2
-      with:
-        path: "libra"
-        # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
-        # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
     - name: Build move-prover
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       run: cargo build
