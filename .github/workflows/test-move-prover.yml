@@ -14,10 +14,9 @@ jobs:
     steps:
     - name: PWD
       run: |
-      pwd
-      cd ~
-      pwd
-      
+        pwd
+        cd ~
+        pwd
     - name: Checkout libra
       uses: actions/checkout@v2
       with:
