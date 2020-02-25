@@ -10,8 +10,14 @@ jobs:
   install_and_test_Move_Prover:
 
     runs-on: ubuntu-18.04
-
+  
     steps:
+    - name: PWD
+      run: |
+      pwd
+      cd ~
+      pwd
+      
     - name: Checkout libra
       uses: actions/checkout@v2
       with:
@@ -19,9 +25,10 @@ jobs:
         # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
         # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
     - name: Detect the changes in move-prover
-      working-directory: /home/runner/work/libra/libra/libra
+      working-directory: ./libra
       #./libra
       run: |
+        pwd
         git status
         git log -5
         git fetch origin
