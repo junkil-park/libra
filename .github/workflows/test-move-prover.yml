@@ -32,7 +32,8 @@ jobs:
         git log -5
         git fetch origin
         git diff --name-only origin/master
-        git diff --name-only origin/master | grep "language/move-prover"
+        git diff --name-only origin/master | grep "test"
+      # git diff --name-only origin/master | grep "language/move-prover"
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
       with:
