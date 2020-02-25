@@ -78,4 +78,4 @@ jobs:
               data = "[move-prover] `cargo test` failed with the following error message: \n```${data}```";    
               console.log(data);
             }
-          }
+          })
