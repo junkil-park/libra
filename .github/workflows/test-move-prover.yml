@@ -66,6 +66,7 @@ jobs:
       if: steps.test.outputs.status != 'success'
       uses: actions/github-script@0.4.0
       with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           const fs = require('fs');
           fs.readFile('cargo_test.log', 'utf-8', (err, data) => {
