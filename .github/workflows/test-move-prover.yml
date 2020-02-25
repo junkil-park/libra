@@ -63,11 +63,9 @@ jobs:
       run: cargo test 2>&1 | tee cargo_test.log
       continue-on-error: true
     - name: Comment the error message if the test failed
-      if steps.test.outputs.status != 'success'
-#      if: failure()
+      if: steps.test.outputs.status != 'success'
       uses: actions/github-script@0.4.0
       with:
-#        github-token: ${{secrets.MIRAI_BOT}}
         script: |
           const fs = require('fs');
           fs.readFile('cargo_test.log', 'utf-8', (err, data) => {
@@ -80,10 +78,3 @@ jobs:
               console.log(data);
             }
           }
-        # github.issues.createComment({
-        #   owner: context.repo.owner,
-        #   repo: context.repo.repo,
-        #   issue_number: context.payload.pull_request.number,
-        #   body: data
-        # });
-        #    }
