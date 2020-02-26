@@ -63,8 +63,8 @@ jobs:
       run: cargo test 2>&1 | tee cargo_test.log
       continue-on-error: true
     - name: Comment the error message if the test failed
-      if: steps.test.outputs.status != 'success'
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      if: steps.test.outputs.status != 'success'
       uses: actions/github-script@0.4.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
