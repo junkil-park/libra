@@ -31,8 +31,28 @@ jobs:
         git log -5
         git fetch origin
         git diff --name-only origin/master
-        git diff --name-only origin/master | grep "language/move-prover"
-      #  git diff --name-only origin/master | grep "test"
+        git diff --name-only origin/master | grep "test"
+      #  git diff --name-only origin/master | grep "language/move-prover"
+      continue-on-error: true # to remove
+    
+    - name: Comment the error message if the test failed
+      #if: steps.test.outputs.status != 'success'
+      if: failure()
+      uses: actions/github-script@0.4.0
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          const fs = require('fs');
+          fs.readFile('libra/language/move-prover/bytecode-to-boogie/cargo_test.log', 'utf-8', (err, data) => {
+            if (err) {
+              console.log("err:", err);
+              return;
+            }
+            if (data) {
+              data = "[move-prover] `cargo test` failed with the following error message: \n```" + data + "```";    
+              console.log(data);
+            }
+          })
 
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
@@ -60,22 +80,7 @@ jobs:
       id: test
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       timeout-minutes: 30 # normally, expected to be done within 10 mins.
-      run: cargo test 2>&1 | tee cargo_test.log
+      run: |
+        set -o pipefail
+        cargo test 2>&1 | tee cargo_test.log
       continue-on-error: true
-    - name: Comment the error message if the test failed
-      if: steps.test.outputs.status != 'success'
-      uses: actions/github-script@0.4.0
-      with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
-        script: |
-          const fs = require('fs');
-          fs.readFile('libra/language/move-prover/bytecode-to-boogie/cargo_test.log', 'utf-8', (err, data) => {
-            if (err) {
-              console.log("err:", err);
-              return;
-            }
-            if (data) {
-              data = "[move-prover] `cargo test` failed with the following error message: \n```" + data + "```";    
-              console.log(data);
-            }
-          })
