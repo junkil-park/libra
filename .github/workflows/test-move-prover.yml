@@ -37,7 +37,7 @@ jobs:
       continue-on-error: true # to remove
     
     - name: Comment the error message if the test failed
-      if: steps.test22.outputs.status != 'success'
+      if: steps.test22.outputs.status == 'success'
       #if: failure()
       uses: actions/github-script@0.4.0
       with:
