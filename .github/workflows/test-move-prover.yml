@@ -31,8 +31,8 @@ jobs:
         git log -5
         git fetch origin
         git diff --name-only origin/master
-        git diff --name-only origin/master | grep "test"
-      #  git diff --name-only origin/master | grep "language/move-prover"
+        git diff --name-only origin/master | grep "language/move-prover"
+      # git diff --name-only origin/master | grep "test"
       continue-on-error: true # to remove
     
     - name: Comment the error message if the test failed
