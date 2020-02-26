@@ -21,9 +21,6 @@ jobs:
     - name: Detect the changes in move-prover
       working-directory: ./libra
       run: |
-        pwd
-        git status
-        git log -5
         git fetch origin
         git diff --name-only origin/master
         git diff --name-only origin/master | grep "test"
@@ -57,9 +54,10 @@ jobs:
       run: |
         set -o pipefail
         cargo test 2>&1 | tee cargo_test.log
-      continue-on-error: true
+      #continue-on-error: true
     - name: Comment the error message if the test failed
-      if: steps.test_move_prover.outputs.status != 'success'
+      if: failure()
+      #if: steps.test_move_prover.outputs.status != 'success'
       uses: actions/github-script@0.4.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
