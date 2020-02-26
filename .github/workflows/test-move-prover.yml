@@ -60,7 +60,7 @@ jobs:
       id: test
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       timeout-minutes: 30 # normally, expected to be done within 10 mins.
-      run: cargo test 2>&1 | tee ~/cargo_test.log
+      run: cargo test 2>&1 | tee cargo_test.log
       continue-on-error: true
     - name: Comment the error message if the test failed
       if: steps.test.outputs.status != 'success'
@@ -69,7 +69,7 @@ jobs:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           const fs = require('fs');
-          fs.readFile('~/cargo_test.log', 'utf-8', (err, data) => {
+          fs.readFile('libra/language/move-prover/bytecode-to-boogie/cargo_test.log', 'utf-8', (err, data) => {
             if (err) {
               console.log("err:", err);
               return;
