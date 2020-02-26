@@ -62,7 +62,7 @@ jobs:
           fs.readFile('libra/language/move-prover/bytecode-to-boogie/cargo_test.log', 'utf-8', (err, data) => {
             if (err) {
               console.log("err:", err);
-              console.log("`cargo test` has not launched. Perhaps, it was because no changes under `language/move-prover` were found.");
+              console.log("`cargo test` has not launched. Perhaps, it was skipped because no changes under `language/move-prover` were found.");
               return;
             }
             if (data) {
