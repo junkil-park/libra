@@ -41,8 +41,8 @@ jobs:
         sudo apt-get install apt-transport-https
         sudo apt-get update
         sudo apt-get install dotnet-sdk-3.1
-        dotnet tool install --global Boogie --version 2.5.7
-#        dotnet tool install --global Boogie --version 2.4.17
+        dotnet tool install --global Boogie --version 2.4.17
+#        dotnet tool install --global Boogie --version 2.5.7
     - name: Export the environment variables
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
