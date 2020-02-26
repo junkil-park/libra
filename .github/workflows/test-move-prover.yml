@@ -12,11 +12,6 @@ jobs:
     runs-on: ubuntu-18.04
   
     steps:
-    - name: PWD
-      run: |
-        pwd
-        cd ~
-        pwd
     - name: Checkout libra
       uses: actions/checkout@v2
       with:
@@ -24,7 +19,6 @@ jobs:
         # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
         # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
     - name: Detect the changes in move-prover
-      id: test22
       working-directory: ./libra
       run: |
         pwd
@@ -34,11 +28,37 @@ jobs:
         git diff --name-only origin/master
         git diff --name-only origin/master | grep "language/move-prover"
       # git diff --name-only origin/master | grep "test"
-      continue-on-error: true # to remove
-    
+    - name: Install Z3
+      uses: pavpanchekha/setup-z3@v1.2
+      with:
+        version: "4.8.7"
+    - name: Install .NET Core SDK and Boogie
+      run: |
+        wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+        sudo dpkg -i packages-microsoft-prod.deb
+        sudo apt-get update
+        sudo apt-get install apt-transport-https
+        sudo apt-get update
+        sudo apt-get install dotnet-sdk-3.1
+        dotnet tool install --global Boogie --version 2.4.17
+      #  dotnet tool install --global Boogie --version 2.5.7
+    - name: Export the environment variables
+      run: |
+        echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
+        echo "::set-env name=Z3_EXE::`which z3`"
+    - name: Build move-prover
+      working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      run: cargo build
+    - name: Test move-prover
+      id: test_move_prover
+      working-directory: ./libra/language/move-prover/bytecode-to-boogie
+      timeout-minutes: 30 # normally, expected to be done within 10 mins.
+      run: |
+        set -o pipefail
+        cargo test 2>&1 | tee cargo_test.log
+      continue-on-error: true
     - name: Comment the error message if the test failed
-      if: steps.test22.outputs.status == 'success'
-      #if: failure()
+      if: steps.test_move_prover.outputs.status != 'success'
       uses: actions/github-script@0.4.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
@@ -54,34 +74,3 @@ jobs:
               console.log(data);
             }
           })
-
-    - name: Install Z3
-      uses: pavpanchekha/setup-z3@v1.2
-      with:
-        version: "4.8.7"
-    - name: Install .NET Core SDK and Boogie
-      run: |
-        wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-        sudo dpkg -i packages-microsoft-prod.deb
-        sudo apt-get update
-        sudo apt-get install apt-transport-https
-        sudo apt-get update
-        sudo apt-get install dotnet-sdk-3.1
-        dotnet tool install --global Boogie --version 2.4.17
-      #  dotnet tool install --global Boogie --version 2.5.7
-
-    - name: Export the environment variables
-      run: |
-        echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
-        echo "::set-env name=Z3_EXE::`which z3`"
-    - name: Build move-prover
-      working-directory: ./libra/language/move-prover/bytecode-to-boogie
-      run: cargo build
-    - name: Test move-prover
-      id: test
-      working-directory: ./libra/language/move-prover/bytecode-to-boogie
-      timeout-minutes: 30 # normally, expected to be done within 10 mins.
-      run: |
-        set -o pipefail
-        cargo test 2>&1 | tee cargo_test.log
-      continue-on-error: true
