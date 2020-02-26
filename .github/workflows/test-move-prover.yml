@@ -24,6 +24,7 @@ jobs:
         # repository: ${{ github.event.client_payload.owner }}/${{ github.event.client_payload.repo }} # repo of the forked libra/libra
         # ref: ${{ github.event.client_payload.pull_ref }} # commit that triggered the PR
     - name: Detect the changes in move-prover
+      id: test22
       working-directory: ./libra
       run: |
         pwd
@@ -36,8 +37,8 @@ jobs:
       continue-on-error: true # to remove
     
     - name: Comment the error message if the test failed
-      #if: steps.test.outputs.status != 'success'
-      if: failure()
+      if: steps.test22.outputs.status != 'success'
+      #if: failure()
       uses: actions/github-script@0.4.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
