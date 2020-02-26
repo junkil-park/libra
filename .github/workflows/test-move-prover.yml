@@ -23,8 +23,8 @@ jobs:
       run: |
         git fetch origin
         git diff --name-only origin/master
-        git diff --name-only origin/master | grep "language/move-prover"
-#        git diff --name-only origin/master | grep "test"
+        git diff --name-only origin/master | grep "test"
+#        git diff --name-only origin/master | grep "language/move-prover"
 
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
@@ -45,9 +45,9 @@ jobs:
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
         echo "::set-env name=Z3_EXE::`which z3`"
-    - name: Build move-prover
-      working-directory: ./libra/language/move-prover/bytecode-to-boogie
-      run: cargo build
+    # - name: Build move-prover
+    #   working-directory: ./libra/language/move-prover/bytecode-to-boogie
+    #   run: cargo build
     - name: Test move-prover
       id: test_move_prover
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
