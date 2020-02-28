@@ -75,19 +75,20 @@ jobs:
 #        git diff --name-only origin/master | grep "language/move-prover"
 
     - name: YES_CASE
-      if: env.RUN_TEST == 'yes'
+      if: env.RUN_TESTT == 'yes'
       run: |
         echo YES!!
         echo $RUN_TEST
 
  
     - name: NO_CASE
-      if: env.RUN_TEST == 'no'
+      if: env.RUN_TESTT == 'no'
       run: |
         echo NO!!!
         echo $RUN_TEST
       
     - name: Install Z3
+      if: env.RUN_TEST == 'yes'
       uses: pavpanchekha/setup-z3@v1.2
       with:
         version: "4.8.7"
@@ -103,17 +104,19 @@ jobs:
 #        dotnet tool install --global Boogie --version 2.4.17
 
     - name: Export the environment variables
+      if: env.RUN_TEST == 'yes'
       run: |
         echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
         echo "::set-env name=Z3_EXE::`which z3`"
     - name: Test move-prover
+      if: env.RUN_TEST == 'yes'
       working-directory: ./libra/language/move-prover/bytecode-to-boogie
       timeout-minutes: 30 # normally, expected to be done within 10 mins.
       run: |
         set -o pipefail
         cargo test 2>&1 | tee cargo_test.log
     - name: Comment the error message if the test failed
-      if: failure()
+      if: env.RUN_TEST == 'yes'
       uses: actions/github-script@0.4.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
