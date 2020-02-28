@@ -51,9 +51,9 @@ jobs:
       uses: actions/github-script@0.6.0
       with:
         script: |          
-          console.log(`https://github.com/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}`);
-          console.log(env.BOOGIE_EXE + env.JOB_ENV);
-          console.log(env.MATRIX_CONTEXT);
+          console.log(`https://github.com/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`);
+          console.log(process.env.BOOGIE_EXE + process.env.JOB_ENV);
+          console.log(process.env.MATRIX_CONTEXT);
 
     - name: Checkout libra
       uses: actions/checkout@v2
