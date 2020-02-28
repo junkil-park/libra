@@ -10,8 +10,12 @@ jobs:
   install_and_test_Move_Prover:
 
     runs-on: ubuntu-18.04
-  
+    env:
+      JOB_ENV: JOB_ENV_1
+
     steps:
+      env:
+        STEPS_ENV: STEPS_ENV_1
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -31,13 +35,19 @@ jobs:
     - name: Dump strategy context
       env:
         STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-      run: echo "$STRATEGY_CONTEXT"
+      run: |
+        echo "$STRATEGY_CONTEXT"
+        echo "::set-env name=BOOGIE_EXE::/home/runner/.dotnet/tools/boogie"
+
     - name: Dump matrix context
       env:
         MATRIX_CONTEXT: ${{ toJson(matrix) }}
       run: |
         echo "$MATRIX_CONTEXT"
         echo "$STRATEGY_CONTEXT"
+        echo "$STEPS_ENV"
+        echo "$JOB_ENV"
+        echo "$BOOGIE_EXE"
 
     - name: Checkout libra
       uses: actions/checkout@v2
