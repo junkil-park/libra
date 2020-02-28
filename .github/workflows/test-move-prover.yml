@@ -66,9 +66,22 @@ jobs:
       run: |
         git fetch origin
         git diff --name-only origin/master
-        git diff --name-only origin/master | grep "language/move-prover"
+        if (git diff --name-only origin/master | grep "language/move-prover")
+        then
+          echo "::set-env name=RUN_TEST::yes"
+        else
+          echo "::set-env name=RUN_TEST::no"
+        fi
 #        git diff --name-only origin/master | grep "test"
 
+    - name: YES_CASE
+      if: env.RUN_TEST == yes
+      run: echo YES!!
+ 
+    - name: NO_CASE
+      if: env.RUN_TEST == no
+      run: echo NO!!!
+      
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
       with:
