@@ -14,8 +14,6 @@ jobs:
       JOB_ENV: JOB_ENV_1
 
     steps:
-      env:
-        STEPS_ENV: STEPS_ENV_1
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
