@@ -74,6 +74,12 @@ jobs:
         fi
 #        git diff --name-only origin/master | grep "language/move-prover"
 
+    -name: Fail
+      run: exit 1
+    -name: Backup
+      if: failure()
+      run: echo backup!
+
     - name: YES_CASE
       if: env.RUN_TESTT == 'yes'
       run: |
