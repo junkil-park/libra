@@ -66,13 +66,13 @@ jobs:
       run: |
         git fetch origin
         git diff --name-only origin/master
-        if (git diff --name-only origin/master | grep "language/move-prover")
+        if (git diff --name-only origin/master | grep "test")
         then
           echo "::set-env name=RUN_TEST::yes"
         else
           echo "::set-env name=RUN_TEST::no"
         fi
-#        git diff --name-only origin/master | grep "test"
+#        git diff --name-only origin/master | grep "language/move-prover"
 
     - name: YES_CASE
       if: env.RUN_TEST == 'yes'
