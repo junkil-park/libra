@@ -77,7 +77,12 @@ jobs:
 
     - name: Fail Fast
       run: |
-        (exit 1)
+        if (exit 1)
+        then
+          echo true
+        else
+          echo false
+        fi
         echo $?
     - name: Backup
       if: failure()
