@@ -47,6 +47,13 @@ jobs:
         echo "$JOB_ENV"
         echo "$BOOGIE_EXE"
 
+    - name: Dump a few things
+      uses: actions/github-script@0.6.0
+        script: |          
+          console.log(`https://github.com/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}`);
+          console.log(env.BOOGIE_EXE + env.JOB_ENV);
+          console.log(env.MATRIX_CONTEXT);
+
     - name: Checkout libra
       uses: actions/checkout@v2
       with:
