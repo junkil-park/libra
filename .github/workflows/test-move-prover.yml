@@ -76,11 +76,16 @@ jobs:
 
     - name: YES_CASE
       if: env.RUN_TEST == ${{'yes'}}
-      run: echo YES!!
+      run: |
+        echo YES!!
+        echo $RUN_TEST
+
  
     - name: NO_CASE
       if: env.RUN_TEST == ${{'no'}}
-      run: echo NO!!!
+      run: |
+        echo NO!!!
+        echo $RUN_TEST
       
     - name: Install Z3
       uses: pavpanchekha/setup-z3@v1.2
