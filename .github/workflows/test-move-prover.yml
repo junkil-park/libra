@@ -74,10 +74,10 @@ jobs:
         fi
 #        git diff --name-only origin/master | grep "language/move-prover"
 
-    -name: Fail Fast
+    - name: Fail Fast
       run: |
         exit 1
-    -name: Backup
+    - name: Backup
       if: failure()
       run: |
         echo backup!
