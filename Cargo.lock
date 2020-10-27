@@ -1232,8 +1232,11 @@ name = "diagen"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "env_logger",
  "libra-workspace-hack",
+ "log",
  "regex",
+ "serde",
 ]
 
 [[package]]
