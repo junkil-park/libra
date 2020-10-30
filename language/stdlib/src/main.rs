@@ -165,15 +165,15 @@ fn main() {
 
     // Generate documentation
     if !no_doc {
-        time_it("Generating stdlib documentation", || {
-            std::fs::remove_dir_all(&STD_LIB_DOC_DIR).unwrap_or(());
-            std::fs::create_dir_all(&STD_LIB_DOC_DIR).unwrap();
-            build_stdlib_doc(with_diagram);
-        });
         time_it("Generating script documentation", || {
             std::fs::remove_dir_all(&TRANSACTION_SCRIPTS_DOC_DIR).unwrap_or(());
             std::fs::create_dir_all(&TRANSACTION_SCRIPTS_DOC_DIR).unwrap();
             build_transaction_script_doc(&transaction_files, with_diagram);
+        });
+        time_it("Generating stdlib documentation", || {
+            std::fs::remove_dir_all(&STD_LIB_DOC_DIR).unwrap_or(());
+            std::fs::create_dir_all(&STD_LIB_DOC_DIR).unwrap();
+            build_stdlib_doc(with_diagram);
         });
     }
 

@@ -169,6 +169,9 @@ fn run_docgen<W: WriteColor>(
     let generator = Docgen::new(env, &options.docgen);
     let checking_elapsed = now.elapsed();
     info!("generating documentation");
+    generator.true_public();
+    return Err(anyhow!("Done with `true_public`"));
+
     for (file, content) in generator.gen() {
         let path = PathBuf::from(&file);
         fs::create_dir_all(path.parent().unwrap())?;

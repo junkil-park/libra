@@ -10,6 +10,7 @@ use num::BigUint;
 use once_cell::sync::Lazy;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
+use serde_json::{json, Result};
 use spec_lang::{
     ast::{ModuleName, SpecBlockInfo, SpecBlockTarget},
     code_writer::{CodeWriter, CodeWriterLabel},
@@ -238,6 +239,48 @@ impl<'env> Docgen<'env> {
             section_nest: RefCell::new(0),
             last_root_section_nest: RefCell::new(0),
         }
+    }
+
+
+
+    pub fn true_public(&self) {
+        #[derive(Serialize, Deserialize)]
+        struct FunctionEntry {
+            name: String,
+            calls: Vec<String>,
+            called_by: Vec<String>,
+            is_public: bool,
+            is_called_by_script: bool,
+            is_native: bool,
+        }
+
+        let mut funs: Vec<FunctionEntry> = Vec::new();
+
+        for module_env in self.env.get_modules() {
+            for fun_env in module_env.get_functions() {
+                let called_functions = fun_env.get_called_functions();
+                let calling_functions = fun_env.get_calling_functions();
+                println!("{}", fun_env.get_name_string());
+                println!("Calls: {:?}", called_functions.iter().map(|id| self.env.get_function(*id).get_name_string()).collect::<Vec<_>>());
+                println!("Called by: {:?}", calling_functions.iter().map(|id| self.env.get_function(*id).get_name_string()).collect::<Vec<_>>());
+                println!();
+
+                let entry = FunctionEntry {
+                    name: fun_env.get_name_string().to_string(),
+                    calls: called_functions.iter().map(|id| self.env.get_function(*id).get_name_string().to_string()).collect::<Vec<_>>(),
+                    called_by: calling_functions.iter().map(|id| self.env.get_function(*id).get_name_string().to_string()).collect::<Vec<_>>(),
+                    is_public: fun_env.is_public(),
+                    is_called_by_script: calling_functions.iter().map(|id| self.env.get_function(*id)).any(|env| env.module_env.is_script_module()),
+                    is_native: fun_env.is_native(),
+                };
+
+                funs.push(entry);
+            }
+        }
+
+        println!("{:?}", serde_json::to_string_pretty(&funs));
+        let mut file = File::create("true_public.json").unwrap();
+        file.write_all(serde_json::to_string_pretty(&funs).unwrap().as_ref());
     }
 
     /// Generate document contents, returning pairs of output file names and generated contents.
