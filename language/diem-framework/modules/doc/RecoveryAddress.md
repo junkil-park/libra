@@ -28,6 +28,24 @@ This module defines an account recovery mechanism that can be used by VASPs.
 
 
 
+<details>
+<summary>Show all the modules that "RecoveryAddress" depends on directly or indirectly</summary>
+
+
+![](img/RecoveryAddress_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "RecoveryAddress" directly or indirectly</summary>
+
+
+![](img/RecoveryAddress_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_RecoveryAddress_RecoveryAddress"></a>
 
 ## Resource `RecoveryAddress`
@@ -240,6 +258,15 @@ Aborts if <code>recovery_account</code> has delegated its <code>KeyRotationCapab
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish" calls</summary>
+
+
+![](img/RecoveryAddress_publish_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_RecoveryAddress_rotate_authentication_key"></a>
 
 ## Function `rotate_authentication_key`
@@ -352,6 +379,15 @@ Aborts if <code>recovery_address</code> does not have the <code>KeyRotationCapab
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_authentication_key" calls</summary>
+
+
+![](img/RecoveryAddress_rotate_authentication_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_RecoveryAddress_add_rotation_capability"></a>
 
 ## Function `add_rotation_capability`
@@ -436,6 +472,15 @@ Aborts if <code>to_recover.address</code> and <code>recovery_address</code> belo
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_rotation_capability" calls</summary>
+
+
+![](img/RecoveryAddress_add_rotation_capability_call_graph.svg)
 
 
 </details>

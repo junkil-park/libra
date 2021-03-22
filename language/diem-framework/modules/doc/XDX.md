@@ -30,6 +30,24 @@ Once the component makeup of the XDX has been chosen the
 
 
 
+<details>
+<summary>Show all the modules that "XDX" depends on directly or indirectly</summary>
+
+
+![](img/XDX_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "XDX" directly or indirectly</summary>
+
+
+![](img/XDX_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_XDX_XDX"></a>
 
 ## Struct `XDX`
@@ -216,6 +234,15 @@ Moreover, only the TreasuryCompliance role can create Preburn.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/XDX_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_XDX_is_xdx"></a>
 
 ## Function `is_xdx`
@@ -268,6 +295,15 @@ Returns true if <code>CoinType</code> is <code><a href="XDX.md#0x1_XDX_XDX">XDX:
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_xdx" calls</summary>
+
+
+![](img/XDX_is_xdx_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_XDX_reserve_address"></a>
 
 ## Function `reserve_address`
@@ -289,6 +325,15 @@ Return the account address where the globally unique XDX::Reserve resource is st
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reserve_address" calls</summary>
+
+
+![](img/XDX_reserve_address_call_graph.svg)
 
 
 </details>

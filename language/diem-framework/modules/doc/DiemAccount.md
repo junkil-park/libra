@@ -109,6 +109,24 @@ before and after every transaction.
 
 
 
+<details>
+<summary>Show all the modules that "DiemAccount" depends on directly or indirectly</summary>
+
+
+![](img/DiemAccount_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemAccount" directly or indirectly</summary>
+
+
+![](img/DiemAccount_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_DiemAccount"></a>
 
 ## Resource `DiemAccount`
@@ -874,6 +892,15 @@ Initialize this module. This is only callable from genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DiemAccount_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_has_published_account_limits"></a>
 
 ## Function `has_published_account_limits`
@@ -900,6 +927,15 @@ Return <code><b>true</b></code> if <code>addr</code> has already published accou
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_published_account_limits" calls</summary>
+
+
+![](img/DiemAccount_has_published_account_limits_call_graph.svg)
 
 
 </details>
@@ -973,6 +1009,15 @@ Depending on the <code>is_withdrawal</code> flag passed in we determine whether 
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "should_track_limits_for_account" calls</summary>
+
+
+![](img/DiemAccount_should_track_limits_for_account_call_graph.svg)
 
 
 </details>
@@ -1175,6 +1220,15 @@ Record a payment of <code>to_deposit</code> from <code>payer</code> to <code>pay
 
 </details>
 
+<details>
+<summary>Show all the functions that "deposit" calls</summary>
+
+
+![](img/DiemAccount_deposit_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_tiered_mint"></a>
 
 ## Function `tiered_mint`
@@ -1284,6 +1338,15 @@ The balance of designated dealer increases by <code>amount</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "tiered_mint" calls</summary>
+
+
+![](img/DiemAccount_tiered_mint_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_cancel_burn"></a>
 
 ## Function `cancel_burn`
@@ -1354,6 +1417,15 @@ The balance of designated dealer increases by <code>amount</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "cancel_burn" calls</summary>
+
+
+![](img/DiemAccount_cancel_burn_call_graph.svg)
 
 
 </details>
@@ -1471,6 +1543,15 @@ Helper to withdraw <code>amount</code> from the given account balance and return
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "withdraw_from_balance" calls</summary>
+
+
+![](img/DiemAccount_withdraw_from_balance_call_graph.svg)
 
 
 </details>
@@ -1618,6 +1699,15 @@ Can only withdraw from the balances of cap.account_address [[H18]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw_from" calls</summary>
+
+
+![](img/DiemAccount_withdraw_from_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_preburn"></a>
 
 ## Function `preburn`
@@ -1722,6 +1812,15 @@ The value of preburn at <code>dd_addr</code> increases by <code>amount</code>;
 
 </details>
 
+<details>
+<summary>Show all the functions that "preburn" calls</summary>
+
+
+![](img/DiemAccount_preburn_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_extract_withdraw_capability"></a>
 
 ## Function `extract_withdraw_capability`
@@ -1791,6 +1890,15 @@ Return a unique capability granting permission to withdraw from the sender's acc
 
 </details>
 
+<details>
+<summary>Show all the functions that "extract_withdraw_capability" calls</summary>
+
+
+![](img/DiemAccount_extract_withdraw_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_restore_withdraw_capability"></a>
 
 ## Function `restore_withdraw_capability`
@@ -1839,6 +1947,15 @@ Return the withdraw capability to the account it originally came from
 <b>ensures</b> <a href="DiemAccount.md#0x1_DiemAccount_spec_holds_own_withdraw_cap">spec_holds_own_withdraw_cap</a>(cap_addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "restore_withdraw_capability" calls</summary>
+
+
+![](img/DiemAccount_restore_withdraw_capability_call_graph.svg)
 
 
 </details>
@@ -1966,6 +2083,15 @@ attestation protocol
 
 </details>
 
+<details>
+<summary>Show all the functions that "pay_from" calls</summary>
+
+
+![](img/DiemAccount_pay_from_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_rotate_authentication_key"></a>
 
 ## Function `rotate_authentication_key`
@@ -2068,6 +2194,15 @@ Can only rotate the authentication_key of cap.account_address [[H17]][PERMISSION
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_authentication_key" calls</summary>
+
+
+![](img/DiemAccount_rotate_authentication_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_extract_key_rotation_capability"></a>
 
 ## Function `extract_key_rotation_capability`
@@ -2154,6 +2289,15 @@ Return a unique capability granting permission to rotate the sender's authentica
 
 </details>
 
+<details>
+<summary>Show all the functions that "extract_key_rotation_capability" calls</summary>
+
+
+![](img/DiemAccount_extract_key_rotation_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_restore_key_rotation_capability"></a>
 
 ## Function `restore_key_rotation_capability`
@@ -2216,6 +2360,15 @@ Return the key rotation capability to the account it originally came from
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "restore_key_rotation_capability" calls</summary>
+
+
+![](img/DiemAccount_restore_key_rotation_capability_call_graph.svg)
 
 
 </details>
@@ -2307,6 +2460,15 @@ then add for both token types.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_currencies_for_account" calls</summary>
+
+
+![](img/DiemAccount_add_currencies_for_account_call_graph.svg)
 
 
 </details>
@@ -2456,6 +2618,15 @@ Creating an account at address 0x0 will abort as it is a reserved address for th
 
 </details>
 
+<details>
+<summary>Show all the functions that "make_account" calls</summary>
+
+
+![](img/DiemAccount_make_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_authentication_key"></a>
 
 ## Function `create_authentication_key`
@@ -2529,6 +2700,15 @@ key prefix of a specific length.
 <pre><code><b>define</b> <a href="DiemAccount.md#0x1_DiemAccount_spec_abstract_create_authentication_key">spec_abstract_create_authentication_key</a>(auth_key_prefix: vector&lt;u8&gt;): vector&lt;u8&gt;;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_authentication_key" calls</summary>
+
+
+![](img/DiemAccount_create_authentication_key_call_graph.svg)
 
 
 </details>
@@ -2671,6 +2851,15 @@ AccountOperationsCapability, WriteSetManager, and finally makes the account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_diem_root_account" calls</summary>
+
+
+![](img/DiemAccount_create_diem_root_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_treasury_compliance_account"></a>
 
 ## Function `create_treasury_compliance_account`
@@ -2789,6 +2978,15 @@ event handle generator, then makes the account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_treasury_compliance_account" calls</summary>
+
+
+![](img/DiemAccount_create_treasury_compliance_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_designated_dealer"></a>
 
 ## Function `create_designated_dealer`
@@ -2878,6 +3076,15 @@ Creates Preburn resource under account 'new_account_address'
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_designated_dealer" calls</summary>
+
+
+![](img/DiemAccount_create_designated_dealer_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_parent_vasp_account"></a>
 
 ## Function `create_parent_vasp_account`
@@ -2962,6 +3169,15 @@ all available currencies in the system will also be added.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_parent_vasp_account" calls</summary>
+
+
+![](img/DiemAccount_create_parent_vasp_account_call_graph.svg)
 
 
 </details>
@@ -3060,6 +3276,15 @@ also be added. This account will be a child of <code>creator</code>, which must 
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_child_vasp_account" calls</summary>
+
+
+![](img/DiemAccount_create_child_vasp_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_signer"></a>
 
 ## Function `create_signer`
@@ -3078,6 +3303,15 @@ also be added. This account will be a child of <code>creator</code>, which must 
 <pre><code><b>native</b> <b>fun</b> <a href="DiemAccount.md#0x1_DiemAccount_create_signer">create_signer</a>(addr: address): signer;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_signer" calls</summary>
+
+
+![](img/DiemAccount_create_signer_call_graph.svg)
 
 
 </details>
@@ -3104,6 +3338,15 @@ also be added. This account will be a child of <code>creator</code>, which must 
 
 </details>
 
+<details>
+<summary>Show all the functions that "destroy_signer" calls</summary>
+
+
+![](img/DiemAccount_destroy_signer_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_balance_for"></a>
 
 ## Function `balance_for`
@@ -3125,6 +3368,15 @@ Helper to return the u64 value of the <code>balance</code> for <code>account</co
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "balance_for" calls</summary>
+
+
+![](img/DiemAccount_balance_for_call_graph.svg)
 
 
 </details>
@@ -3163,6 +3415,15 @@ Return the current balance of the account at <code>addr</code>.
 <pre><code><b>aborts_if</b> !<b>exists</b>&lt;<a href="DiemAccount.md#0x1_DiemAccount_Balance">Balance</a>&lt;Token&gt;&gt;(addr) <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_NOT_PUBLISHED">Errors::NOT_PUBLISHED</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "balance" calls</summary>
+
+
+![](img/DiemAccount_balance_call_graph.svg)
 
 
 </details>
@@ -3302,6 +3563,15 @@ This function must abort if the predicate <code>can_hold_balance</code> for <cod
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_currency" calls</summary>
+
+
+![](img/DiemAccount_add_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_accepts_currency"></a>
 
 ## Function `accepts_currency`
@@ -3327,6 +3597,15 @@ Return whether the account at <code>addr</code> accepts <code>Token</code> type 
 
 </details>
 
+<details>
+<summary>Show all the functions that "accepts_currency" calls</summary>
+
+
+![](img/DiemAccount_accepts_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_sequence_number_for_account"></a>
 
 ## Function `sequence_number_for_account`
@@ -3348,6 +3627,15 @@ Helper to return the sequence number field for given <code>account</code>
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "sequence_number_for_account" calls</summary>
+
+
+![](img/DiemAccount_sequence_number_for_account_call_graph.svg)
 
 
 </details>
@@ -3378,6 +3666,15 @@ Return the current sequence number at <code>addr</code>
 
 </details>
 
+<details>
+<summary>Show all the functions that "sequence_number" calls</summary>
+
+
+![](img/DiemAccount_sequence_number_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_authentication_key"></a>
 
 ## Function `authentication_key`
@@ -3400,6 +3697,15 @@ Return the authentication key for this account
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "authentication_key" calls</summary>
+
+
+![](img/DiemAccount_authentication_key_call_graph.svg)
 
 
 </details>
@@ -3431,6 +3737,15 @@ Return true if the account at <code>addr</code> has delegated its key rotation c
 
 </details>
 
+<details>
+<summary>Show all the functions that "delegated_key_rotation_capability" calls</summary>
+
+
+![](img/DiemAccount_delegated_key_rotation_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_delegated_withdraw_capability"></a>
 
 ## Function `delegated_withdraw_capability`
@@ -3454,6 +3769,15 @@ Return true if the account at <code>addr</code> has delegated its withdraw capab
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "delegated_withdraw_capability" calls</summary>
+
+
+![](img/DiemAccount_delegated_withdraw_capability_call_graph.svg)
 
 
 </details>
@@ -3483,6 +3807,15 @@ Return a reference to the address associated with the given withdraw capability
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw_capability_address" calls</summary>
+
+
+![](img/DiemAccount_withdraw_capability_address_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_key_rotation_capability_address"></a>
 
 ## Function `key_rotation_capability_address`
@@ -3508,6 +3841,15 @@ Return a reference to the address associated with the given key rotation capabil
 
 </details>
 
+<details>
+<summary>Show all the functions that "key_rotation_capability_address" calls</summary>
+
+
+![](img/DiemAccount_key_rotation_capability_address_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_exists_at"></a>
 
 ## Function `exists_at`
@@ -3529,6 +3871,15 @@ Checks if an account exists at <code>check_addr</code>
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "exists_at" calls</summary>
+
+
+![](img/DiemAccount_exists_at_call_graph.svg)
 
 
 </details>
@@ -3645,6 +3996,15 @@ Covered: L75 (Match 9)
 
 </details>
 
+<details>
+<summary>Show all the functions that "module_prologue" calls</summary>
+
+
+![](img/DiemAccount_module_prologue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_script_prologue"></a>
 
 ## Function `script_prologue`
@@ -3752,6 +4112,15 @@ Covered: L74 (Match 8)
 
 </details>
 
+<details>
+<summary>Show all the functions that "script_prologue" calls</summary>
+
+
+![](img/DiemAccount_script_prologue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_writeset_prologue"></a>
 
 ## Function `writeset_prologue`
@@ -3848,6 +4217,15 @@ Covered: L146 (Match 0)
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "writeset_prologue" calls</summary>
+
+
+![](img/DiemAccount_writeset_prologue_call_graph.svg)
 
 
 </details>
@@ -4119,6 +4497,15 @@ Only happens if this is called in Genesis. Doesn't need to be handled.
 
 </details>
 
+<details>
+<summary>Show all the functions that "prologue_common" calls</summary>
+
+
+![](img/DiemAccount_prologue_common_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_epilogue"></a>
 
 ## Function `epilogue`
@@ -4205,6 +4592,15 @@ based on the conditions checked in the prologue, should never fail.
 
 </details>
 
+<details>
+<summary>Show all the functions that "epilogue" calls</summary>
+
+
+![](img/DiemAccount_epilogue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_writeset_epilogue"></a>
 
 ## Function `writeset_epilogue`
@@ -4276,6 +4672,15 @@ Epilogue for WriteSet trasnaction
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "writeset_epilogue" calls</summary>
+
+
+![](img/DiemAccount_writeset_epilogue_call_graph.svg)
 
 
 </details>
@@ -4358,6 +4763,15 @@ Create a Validator account
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_validator_account" calls</summary>
+
+
+![](img/DiemAccount_create_validator_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemAccount_create_validator_operator_account"></a>
 
 ## Function `create_validator_operator_account`
@@ -4432,6 +4846,15 @@ Create a Validator Operator account
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_validator_operator_account" calls</summary>
+
+
+![](img/DiemAccount_create_validator_operator_account_call_graph.svg)
 
 
 </details>

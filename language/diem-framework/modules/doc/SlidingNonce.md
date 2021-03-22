@@ -29,6 +29,24 @@ When nonce X is recorded, all transactions with nonces lower then X-128 will abo
 
 
 
+<details>
+<summary>Show all the modules that "SlidingNonce" depends on directly or indirectly</summary>
+
+
+![](img/SlidingNonce_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "SlidingNonce" directly or indirectly</summary>
+
+
+![](img/SlidingNonce_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_SlidingNonce_SlidingNonce"></a>
 
 ## Resource `SlidingNonce`
@@ -177,6 +195,15 @@ Calls <code>try_record_nonce</code> and aborts transaction if returned code is n
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "record_nonce_or_abort" calls</summary>
+
+
+![](img/SlidingNonce_record_nonce_or_abort_call_graph.svg)
 
 
 </details>
@@ -445,6 +472,15 @@ Specification version of <code><a href="SlidingNonce.md#0x1_SlidingNonce_try_rec
 
 </details>
 
+<details>
+<summary>Show all the functions that "try_record_nonce" calls</summary>
+
+
+![](img/SlidingNonce_try_record_nonce_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_SlidingNonce_publish"></a>
 
 ## Function `publish`
@@ -483,6 +519,15 @@ This is required before other functions in this module can be called for <code>a
 <b>ensures</b> <b>exists</b>&lt;<a href="SlidingNonce.md#0x1_SlidingNonce">SlidingNonce</a>&gt;(<a href="../../../move-stdlib/docs/Signer.md#0x1_Signer_spec_address_of">Signer::spec_address_of</a>(account));
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "publish" calls</summary>
+
+
+![](img/SlidingNonce_publish_call_graph.svg)
 
 
 </details>

@@ -23,6 +23,24 @@ including different costs of running the VM.
 
 
 
+<details>
+<summary>Show all the modules that "DiemVMConfig" depends on directly or indirectly</summary>
+
+
+![](img/DiemVMConfig_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemVMConfig" directly or indirectly</summary>
+
+
+![](img/DiemVMConfig_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemVMConfig_DiemVMConfig"></a>
 
 ## Struct `DiemVMConfig`
@@ -292,6 +310,15 @@ Must abort if the signer does not have the DiemRoot role [[H11]][PERMISSION].
     }};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DiemVMConfig_initialize_call_graph.svg)
 
 
 </details>

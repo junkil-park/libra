@@ -87,6 +87,24 @@ minting and burning of coins.
 
 
 
+<details>
+<summary>Show all the modules that "Diem" depends on directly or indirectly</summary>
+
+
+![](img/Diem_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "Diem" directly or indirectly</summary>
+
+
+![](img/Diem_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_Diem_Diem"></a>
 
 ## Resource `Diem`
@@ -841,6 +859,15 @@ config, and publishes the <code>CurrencyRegistrationCapability</code> under the
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/Diem_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_publish_burn_capability"></a>
 
 ## Function `publish_burn_capability`
@@ -923,6 +950,15 @@ Only a TreasuryCompliance account can have the BurnCapability [[H3]][PERMISSION]
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_burn_capability" calls</summary>
+
+
+![](img/Diem_publish_burn_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_mint"></a>
 
 ## Function `mint`
@@ -974,6 +1010,15 @@ Must abort if the account does not have the MintCapability [[H1]][PERMISSION].
 <b>include</b> <a href="Diem.md#0x1_Diem_MintEnsures">MintEnsures</a>&lt;CoinType&gt;;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mint" calls</summary>
+
+
+![](img/Diem_mint_call_graph.svg)
 
 
 </details>
@@ -1079,6 +1124,15 @@ Must abort if the account does not have the BurnCapability [[H3]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn" calls</summary>
+
+
+![](img/Diem_burn_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_cancel_burn"></a>
 
 ## Function `cancel_burn`
@@ -1167,6 +1221,15 @@ Must abort if the account does not have the BurnCapability [[H3]][PERMISSION].
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "cancel_burn" calls</summary>
+
+
+![](img/Diem_cancel_burn_call_graph.svg)
 
 
 </details>
@@ -1286,6 +1349,15 @@ reference.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mint_with_capability" calls</summary>
+
+
+![](img/Diem_mint_with_capability_call_graph.svg)
 
 
 </details>
@@ -1428,6 +1500,15 @@ being preburned is a synthetic currency (<code>is_synthetic = <b>true</b></code>
 
 </details>
 
+<details>
+<summary>Show all the functions that "preburn_with_resource" calls</summary>
+
+
+![](img/Diem_preburn_with_resource_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_create_preburn"></a>
 
 ## Function `create_preburn`
@@ -1480,6 +1561,15 @@ outside of a Designated Dealer, e.g., for transaction fees, or for the XDX reser
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_preburn" calls</summary>
+
+
+![](img/Diem_create_preburn_call_graph.svg)
 
 
 </details>
@@ -1576,6 +1666,15 @@ dealer account <code>account</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_preburn_queue" calls</summary>
+
+
+![](img/Diem_publish_preburn_queue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_publish_preburn_queue_to_account"></a>
 
 ## Function `publish_preburn_queue_to_account`
@@ -1643,6 +1742,15 @@ PreburnQueue is published under the DesignatedDealer account.
 <b>aborts_if</b> <b>exists</b>&lt;<a href="Diem.md#0x1_Diem_Preburn">Preburn</a>&lt;CoinType&gt;&gt;(account_addr) <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_STATE">Errors::INVALID_STATE</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "publish_preburn_queue_to_account" calls</summary>
+
+
+![](img/Diem_publish_preburn_queue_to_account_call_graph.svg)
 
 
 </details>
@@ -1753,6 +1861,15 @@ Must abort if the account doesn't have the <code><a href="Diem.md#0x1_Diem_Prebu
 
 </details>
 
+<details>
+<summary>Show all the functions that "upgrade_preburn" calls</summary>
+
+
+![](img/Diem_upgrade_preburn_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_add_preburn_to_queue"></a>
 
 ## Function `add_preburn_to_queue`
@@ -1823,6 +1940,15 @@ number of preburn requests does not exceed <code><a href="Diem.md#0x1_Diem_MAX_O
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_preburn_to_queue" calls</summary>
+
+
+![](img/Diem_add_preburn_to_queue_call_graph.svg)
 
 
 </details>
@@ -1953,6 +2079,15 @@ Publishes if it doesn't exists. Updates its state either way.
 
 </details>
 
+<details>
+<summary>Show all the functions that "preburn_to" calls</summary>
+
+
+![](img/Diem_preburn_to_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_remove_preburn_from_queue"></a>
 
 ## Function `remove_preburn_from_queue`
@@ -2063,6 +2198,15 @@ Calls to this function will fail if:
 
 </details>
 
+<details>
+<summary>Show all the functions that "remove_preburn_from_queue" calls</summary>
+
+
+![](img/Diem_remove_preburn_from_queue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_burn_with_capability"></a>
 
 ## Function `burn_with_capability`
@@ -2149,6 +2293,15 @@ the preburn queue with a <code>to_burn</code> amount equal to <code>amount</code
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_with_capability" calls</summary>
+
+
+![](img/Diem_burn_with_capability_call_graph.svg)
 
 
 </details>
@@ -2276,6 +2429,15 @@ Calls to this function will fail if the preburn <code>to_burn</code> area for <c
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_with_resource_cap" calls</summary>
+
+
+![](img/Diem_burn_with_resource_cap_call_graph.svg)
 
 
 </details>
@@ -2411,6 +2573,15 @@ at <code>preburn_address</code> does not contain a preburn request of the right 
 
 </details>
 
+<details>
+<summary>Show all the functions that "cancel_burn_with_capability" calls</summary>
+
+
+![](img/Diem_cancel_burn_with_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_burn_now"></a>
 
 ## Function `burn_now`
@@ -2479,6 +2650,15 @@ used for administrative burns, like unpacking an XDX coin or charging fees.
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn_now" calls</summary>
+
+
+![](img/Diem_burn_now_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_remove_burn_capability"></a>
 
 ## Function `remove_burn_capability`
@@ -2533,6 +2713,15 @@ published <code><a href="Diem.md#0x1_Diem_BurnCapability">BurnCapability</a>&lt;
 
 </details>
 
+<details>
+<summary>Show all the functions that "remove_burn_capability" calls</summary>
+
+
+![](img/Diem_remove_burn_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_preburn_value"></a>
 
 ## Function `preburn_value`
@@ -2558,6 +2747,15 @@ currency).
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "preburn_value" calls</summary>
+
+
+![](img/Diem_preburn_value_call_graph.svg)
 
 
 </details>
@@ -2589,6 +2787,15 @@ this and it will be successful as long as <code>CoinType</code> is a registered 
 
 </details>
 
+<details>
+<summary>Show all the functions that "zero" calls</summary>
+
+
+![](img/Diem_zero_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_value"></a>
 
 ## Function `value`
@@ -2612,6 +2819,15 @@ represented in the base units for the currency represented by
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "value" calls</summary>
+
+
+![](img/Diem_value_call_graph.svg)
 
 
 </details>
@@ -2654,6 +2870,15 @@ with value equal to <code>amount</code>. Calls will fail if <code>amount &gt; <a
 <b>ensures</b> result_2.value == amount;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "split" calls</summary>
+
+
+![](img/Diem_split_call_graph.svg)
 
 
 </details>
@@ -2718,6 +2943,15 @@ value of the passed-in <code>coin</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw" calls</summary>
+
+
+![](img/Diem_withdraw_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_withdraw_all"></a>
 
 ## Function `withdraw_all`
@@ -2760,6 +2994,15 @@ zero. Does not abort.
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw_all" calls</summary>
+
+
+![](img/Diem_withdraw_all_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_join"></a>
 
 ## Function `join`
@@ -2797,6 +3040,15 @@ Destroys on of the input coins.
 <b>ensures</b> result.value == coin1.value + coin2.value;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "join" calls</summary>
+
+
+![](img/Diem_join_call_graph.svg)
 
 
 </details>
@@ -2857,6 +3109,15 @@ The <code>check</code> coin is consumed in the process
 
 </details>
 
+<details>
+<summary>Show all the functions that "deposit" calls</summary>
+
+
+![](img/Diem_deposit_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_destroy_zero"></a>
 
 ## Function `destroy_zero`
@@ -2894,6 +3155,15 @@ a <code><a href="Diem.md#0x1_Diem_BurnCapability">BurnCapability</a></code> for 
 <b>aborts_if</b> coin.value &gt; 0 <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "destroy_zero" calls</summary>
+
+
+![](img/Diem_destroy_zero_call_graph.svg)
 
 
 </details>
@@ -3020,6 +3290,15 @@ Must abort if the signer does not have the DiemRoot role [[H8]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "register_currency" calls</summary>
+
+
+![](img/Diem_register_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_register_SCS_currency"></a>
 
 ## Function `register_SCS_currency`
@@ -3125,6 +3404,15 @@ Only a TreasuryCompliance account can have the BurnCapability [[H3]][PERMISSION]
 
 </details>
 
+<details>
+<summary>Show all the functions that "register_SCS_currency" calls</summary>
+
+
+![](img/Diem_register_SCS_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_market_cap"></a>
 
 ## Function `market_cap`
@@ -3148,6 +3436,15 @@ Returns the total amount of currency minted of type <code>CoinType</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "market_cap" calls</summary>
+
+
+![](img/Diem_market_cap_call_graph.svg)
 
 
 </details>
@@ -3210,6 +3507,15 @@ rate is needed.
 
 </details>
 
+<details>
+<summary>Show all the functions that "approx_xdx_for_value" calls</summary>
+
+
+![](img/Diem_approx_xdx_for_value_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_approx_xdx_for_coin"></a>
 
 ## Function `approx_xdx_for_coin`
@@ -3235,6 +3541,15 @@ rate is needed.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "approx_xdx_for_coin" calls</summary>
+
+
+![](img/Diem_approx_xdx_for_coin_call_graph.svg)
 
 
 </details>
@@ -3265,6 +3580,15 @@ Returns <code><b>false</b></code> otherwise.
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_currency" calls</summary>
+
+
+![](img/Diem_is_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_is_SCS_currency"></a>
 
 ## Function `is_SCS_currency`
@@ -3286,6 +3610,15 @@ Returns <code><b>false</b></code> otherwise.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_SCS_currency" calls</summary>
+
+
+![](img/Diem_is_SCS_currency_call_graph.svg)
 
 
 </details>
@@ -3319,6 +3652,15 @@ its <code><a href="Diem.md#0x1_Diem_CurrencyInfo">CurrencyInfo</a></code>. Retur
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_synthetic_currency" calls</summary>
+
+
+![](img/Diem_is_synthetic_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_scaling_factor"></a>
 
 ## Function `scaling_factor`
@@ -3347,6 +3689,15 @@ in its <code><a href="Diem.md#0x1_Diem_CurrencyInfo">CurrencyInfo</a></code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "scaling_factor" calls</summary>
+
+
+![](img/Diem_scaling_factor_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_fractional_part"></a>
 
 ## Function `fractional_part`
@@ -3371,6 +3722,15 @@ Returns the representable (i.e. real-world) fractional part for the
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "fractional_part" calls</summary>
+
+
+![](img/Diem_fractional_part_call_graph.svg)
 
 
 </details>
@@ -3424,6 +3784,15 @@ its <code><a href="Diem.md#0x1_Diem_CurrencyInfo">CurrencyInfo</a></code> resour
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "currency_code" calls</summary>
+
+
+![](img/Diem_currency_code_call_graph.svg)
 
 
 </details>
@@ -3533,6 +3902,15 @@ Must abort if the account does not have the TreasuryCompliance Role [[H5]][PERMI
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_xdx_exchange_rate" calls</summary>
+
+
+![](img/Diem_update_xdx_exchange_rate_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_xdx_exchange_rate"></a>
 
 ## Function `xdx_exchange_rate`
@@ -3572,6 +3950,15 @@ Returns the (rough) exchange rate between <code>CoinType</code> and <code><a hre
 <b>ensures</b> result == info.to_xdx_exchange_rate;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "xdx_exchange_rate" calls</summary>
+
+
+![](img/Diem_xdx_exchange_rate_call_graph.svg)
 
 
 </details>
@@ -3661,6 +4048,15 @@ Only the TreasuryCompliance role can enable/disable minting [[H2]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_minting_ability" calls</summary>
+
+
+![](img/Diem_update_minting_ability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_assert_is_currency"></a>
 
 ## Function `assert_is_currency`
@@ -3710,6 +4106,15 @@ Asserts that <code>CoinType</code> is a registered currency.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_is_currency" calls</summary>
+
+
+![](img/Diem_assert_is_currency_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Diem_assert_is_SCS_currency"></a>
 
 ## Function `assert_is_SCS_currency`
@@ -3731,6 +4136,15 @@ Asserts that <code>CoinType</code> is a registered currency.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_is_SCS_currency" calls</summary>
+
+
+![](img/Diem_assert_is_SCS_currency_call_graph.svg)
 
 
 </details>

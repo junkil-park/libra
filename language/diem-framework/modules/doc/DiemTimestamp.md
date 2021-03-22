@@ -37,6 +37,24 @@ which reflect that the system has been successfully initialized.
 
 
 
+<details>
+<summary>Show all the modules that "DiemTimestamp" depends on directly or indirectly</summary>
+
+
+![](img/DiemTimestamp_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemTimestamp" directly or indirectly</summary>
+
+
+![](img/DiemTimestamp_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemTimestamp_CurrentTimeMicroseconds"></a>
 
 ## Resource `CurrentTimeMicroseconds`
@@ -160,6 +178,15 @@ will become activated and need to hold.
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_time_has_started" calls</summary>
+
+
+![](img/DiemTimestamp_set_time_has_started_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTimestamp_update_global_time"></a>
 
 ## Function `update_global_time`
@@ -240,6 +267,15 @@ Conditions we only check for the implementation, but do not pass to the caller.
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_global_time" calls</summary>
+
+
+![](img/DiemTimestamp_update_global_time_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTimestamp_now_microseconds"></a>
 
 ## Function `now_microseconds`
@@ -287,6 +323,15 @@ Gets the current time in microseconds.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "now_microseconds" calls</summary>
+
+
+![](img/DiemTimestamp_now_microseconds_call_graph.svg)
 
 
 </details>
@@ -341,6 +386,15 @@ Gets the current time in seconds.
 
 </details>
 
+<details>
+<summary>Show all the functions that "now_seconds" calls</summary>
+
+
+![](img/DiemTimestamp_now_seconds_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTimestamp_is_genesis"></a>
 
 ## Function `is_genesis`
@@ -362,6 +416,15 @@ Helper function to determine if Diem is in genesis state.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_genesis" calls</summary>
+
+
+![](img/DiemTimestamp_is_genesis_call_graph.svg)
 
 
 </details>
@@ -416,6 +479,15 @@ Helper schema to specify that a function aborts if not in genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_genesis" calls</summary>
+
+
+![](img/DiemTimestamp_assert_genesis_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTimestamp_is_operating"></a>
 
 ## Function `is_operating`
@@ -438,6 +510,15 @@ for convenience. Testing <code><a href="DiemTimestamp.md#0x1_DiemTimestamp_is_op
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_operating" calls</summary>
+
+
+![](img/DiemTimestamp_is_operating_call_graph.svg)
 
 
 </details>
@@ -488,6 +569,15 @@ Helper schema to specify that a function aborts if not operating.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_operating" calls</summary>
+
+
+![](img/DiemTimestamp_assert_operating_call_graph.svg)
 
 
 </details>

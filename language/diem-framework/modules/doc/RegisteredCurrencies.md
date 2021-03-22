@@ -25,6 +25,24 @@ string (vector<u8>) for the currency name to vector of names in DiemConfig.
 
 
 
+<details>
+<summary>Show all the modules that "RegisteredCurrencies" depends on directly or indirectly</summary>
+
+
+![](img/RegisteredCurrencies_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "RegisteredCurrencies" directly or indirectly</summary>
+
+
+![](img/RegisteredCurrencies_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_RegisteredCurrencies_RegisteredCurrencies"></a>
 
 ## Struct `RegisteredCurrencies`
@@ -142,6 +160,15 @@ a Diem root signer.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/RegisteredCurrencies_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_RegisteredCurrencies_add_currency_code"></a>
 
 ## Function `add_currency_code`
@@ -223,6 +250,15 @@ The same currency code can be only added once.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_currency_code" calls</summary>
+
+
+![](img/RegisteredCurrencies_add_currency_code_call_graph.svg)
 
 
 </details>

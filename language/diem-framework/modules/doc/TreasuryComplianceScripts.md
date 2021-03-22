@@ -92,6 +92,24 @@ per-transaction basis.
 
 
 
+<details>
+<summary>Show all the modules that "TreasuryComplianceScripts" depends on directly or indirectly</summary>
+
+
+![](img/TreasuryComplianceScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "TreasuryComplianceScripts" directly or indirectly</summary>
+
+
+![](img/TreasuryComplianceScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_cancel_burn_with_amount"></a>
 
 ## Function `cancel_burn_with_amount`
@@ -244,6 +262,15 @@ Only the account with the burn capability can cancel burning [[H3]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "cancel_burn_with_amount" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_cancel_burn_with_amount_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_burn_with_amount"></a>
 
 ## Function `burn_with_amount`
@@ -377,6 +404,15 @@ Only the account with the burn capability can burn coins [[H3]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn_with_amount" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_burn_with_amount_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_preburn"></a>
 
 ## Function `preburn`
@@ -502,6 +538,15 @@ Only the account with a Preburn resource or PreburnQueue resource can preburn [[
 
 </details>
 
+<details>
+<summary>Show all the functions that "preburn" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_preburn_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_burn_txn_fees"></a>
 
 ## Function `burn_txn_fees`
@@ -581,6 +626,15 @@ held in the <code><a href="Diem.md#0x1_Diem_CurrencyInfo">Diem::CurrencyInfo</a>
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_txn_fees" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_burn_txn_fees_call_graph.svg)
 
 
 </details>
@@ -725,6 +779,15 @@ Only the Treasury Compliance account can mint [[H1]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "tiered_mint" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_tiered_mint_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_freeze_account"></a>
 
 ## Function `freeze_account`
@@ -817,6 +880,15 @@ under <code>0xA550C18</code> with the <code>frozen_address</code> being the <cod
 
 </details>
 
+<details>
+<summary>Show all the functions that "freeze_account" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_freeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_unfreeze_account"></a>
 
 ## Function `unfreeze_account`
@@ -899,6 +971,15 @@ the <code>unfrozen_address</code> set the <code>to_unfreeze_account</code>'s add
 
 </details>
 
+<details>
+<summary>Show all the functions that "unfreeze_account" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_unfreeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_update_dual_attestation_limit"></a>
 
 ## Function `update_dual_attestation_limit`
@@ -972,6 +1053,15 @@ Updates the <code>micro_xdx_limit</code> field of the <code><a href="DualAttesta
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_dual_attestation_limit" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_dual_attestation_limit_call_graph.svg)
 
 
 </details>
@@ -1104,6 +1194,15 @@ Only the Treasury Compliance account can update the exchange rate [[H5]][PERMISS
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_exchange_rate" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_exchange_rate_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_update_minting_ability"></a>
 
 ## Function `update_minting_ability`
@@ -1174,6 +1273,15 @@ This transaction needs to be sent by the Treasury Compliance account.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_minting_ability" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_minting_ability_call_graph.svg)
 
 
 </details>

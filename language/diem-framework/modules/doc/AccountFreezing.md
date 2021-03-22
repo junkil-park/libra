@@ -33,6 +33,24 @@ Module which manages freezing of accounts.
 
 
 
+<details>
+<summary>Show all the modules that "AccountFreezing" depends on directly or indirectly</summary>
+
+
+![](img/AccountFreezing_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountFreezing" directly or indirectly</summary>
+
+
+![](img/AccountFreezing_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_AccountFreezing_FreezingBit"></a>
 
 ## Resource `FreezingBit`
@@ -266,6 +284,15 @@ The <code><a href="AccountFreezing.md#0x1_AccountFreezing_FreezingBit">FreezingB
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/AccountFreezing_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountFreezing_create"></a>
 
 ## Function `create`
@@ -306,6 +333,15 @@ The <code><a href="AccountFreezing.md#0x1_AccountFreezing_FreezingBit">FreezingB
 <b>ensures</b> <a href="AccountFreezing.md#0x1_AccountFreezing_spec_account_is_not_frozen">spec_account_is_not_frozen</a>(addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create" calls</summary>
+
+
+![](img/AccountFreezing_create_call_graph.svg)
 
 
 </details>
@@ -391,6 +427,15 @@ Freeze the account at <code>addr</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "freeze_account" calls</summary>
+
+
+![](img/AccountFreezing_freeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountFreezing_unfreeze_account"></a>
 
 ## Function `unfreeze_account`
@@ -467,6 +512,15 @@ Unfreeze the account at <code>addr</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "unfreeze_account" calls</summary>
+
+
+![](img/AccountFreezing_unfreeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountFreezing_account_is_frozen"></a>
 
 ## Function `account_is_frozen`
@@ -503,6 +557,15 @@ Returns if the account at <code>addr</code> is frozen.
 <b>ensures</b> result == <a href="AccountFreezing.md#0x1_AccountFreezing_spec_account_is_frozen">spec_account_is_frozen</a>(addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "account_is_frozen" calls</summary>
+
+
+![](img/AccountFreezing_account_is_frozen_call_graph.svg)
 
 
 </details>
@@ -553,6 +616,15 @@ Assert that an account is not frozen.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_not_frozen" calls</summary>
+
+
+![](img/AccountFreezing_assert_not_frozen_call_graph.svg)
 
 
 </details>

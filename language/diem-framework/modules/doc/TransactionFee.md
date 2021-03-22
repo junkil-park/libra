@@ -32,6 +32,24 @@ Functions to initialize, accumulated, and burn transaction fees.
 
 
 
+<details>
+<summary>Show all the modules that "TransactionFee" depends on directly or indirectly</summary>
+
+
+![](img/TransactionFee_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "TransactionFee" directly or indirectly</summary>
+
+
+![](img/TransactionFee_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_TransactionFee_TransactionFee"></a>
 
 ## Resource `TransactionFee`
@@ -142,6 +160,15 @@ Called in genesis. Sets up the needed resources to collect transaction fees from
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/TransactionFee_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TransactionFee_is_coin_initialized"></a>
 
 ## Function `is_coin_initialized`
@@ -166,6 +193,15 @@ Called in genesis. Sets up the needed resources to collect transaction fees from
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_coin_initialized" calls</summary>
+
+
+![](img/TransactionFee_is_coin_initialized_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TransactionFee_is_initialized"></a>
 
 ## Function `is_initialized`
@@ -186,6 +222,15 @@ Called in genesis. Sets up the needed resources to collect transaction fees from
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_initialized" calls</summary>
+
+
+![](img/TransactionFee_is_initialized_call_graph.svg)
 
 
 </details>
@@ -224,6 +269,15 @@ Sets up the needed transaction fee state for a given <code>CoinType</code> curre
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_txn_fee_currency" calls</summary>
+
+
+![](img/TransactionFee_add_txn_fee_currency_call_graph.svg)
 
 
 </details>
@@ -271,6 +325,15 @@ Deposit <code>coin</code> into the transaction fees bucket
 <b>ensures</b> fees.value == <b>old</b>(fees.value) + coin.value;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "pay_fee" calls</summary>
+
+
+![](img/TransactionFee_pay_fee_call_graph.svg)
 
 
 </details>
@@ -410,6 +473,15 @@ BurnCapability is not transferrable [[J3]][PERMISSION].
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_fees" calls</summary>
+
+
+![](img/TransactionFee_burn_fees_call_graph.svg)
 
 
 </details>

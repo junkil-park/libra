@@ -26,6 +26,24 @@ This module defines a struct storing the metadata of the block and new block eve
 
 
 
+<details>
+<summary>Show all the modules that "DiemBlock" depends on directly or indirectly</summary>
+
+
+![](img/DiemBlock_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemBlock" directly or indirectly</summary>
+
+
+![](img/DiemBlock_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemBlock_BlockMetadata"></a>
 
 ## Resource `BlockMetadata`
@@ -182,6 +200,15 @@ Currently, it is invoked in the genesis transaction
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_block_metadata" calls</summary>
+
+
+![](img/DiemBlock_initialize_block_metadata_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemBlock_is_initialized"></a>
 
 ## Function `is_initialized`
@@ -203,6 +230,15 @@ Helper function to determine whether this module has been initialized.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_initialized" calls</summary>
+
+
+![](img/DiemBlock_is_initialized_call_graph.svg)
 
 
 </details>
@@ -303,6 +339,15 @@ The runtime always runs this before executing the transactions in a block.
 
 </details>
 
+<details>
+<summary>Show all the functions that "block_prologue" calls</summary>
+
+
+![](img/DiemBlock_block_prologue_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemBlock_get_current_block_height"></a>
 
 ## Function `get_current_block_height`
@@ -325,6 +370,15 @@ Get the current block height
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_current_block_height" calls</summary>
+
+
+![](img/DiemBlock_get_current_block_height_call_graph.svg)
 
 
 </details>

@@ -703,6 +703,24 @@ Script documentation: <code>update_diem_version</code>
 
 
 
+<details>
+<summary>Show all the modules that "AccountCreationScripts" depends on directly or indirectly</summary>
+
+
+![](img/AccountCreationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountCreationScripts" directly or indirectly</summary>
+
+
+![](img/AccountCreationScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_child_vasp_account"></a>
 
 ##### Function `create_child_vasp_account`
@@ -875,6 +893,15 @@ Only Parent VASP accounts can create Child VASP accounts [[A7]][ROLE].
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_child_vasp_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_child_vasp_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_validator_operator_account"></a>
 
 ##### Function `create_validator_operator_account`
@@ -1002,6 +1029,15 @@ Only the Diem Root account can create Validator Operator accounts [[A4]][ROLE].
 <pre><code><b>include</b> <a href="../modules/doc/Roles.md#0x1_Roles_AbortsIfNotDiemRoot">Roles::AbortsIfNotDiemRoot</a>{account: dr_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_validator_operator_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_validator_operator_account_call_graph.svg)
 
 
 </details>
@@ -1140,6 +1176,15 @@ Only the Diem Root account can create Validator accounts [[A3]][ROLE].
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_validator_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_validator_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_parent_vasp_account"></a>
 
 ##### Function `create_parent_vasp_account`
@@ -1264,6 +1309,15 @@ Only the Treasury Compliance account can create Parent VASP accounts [[A6]][ROLE
 <pre><code><b>include</b> <a href="../modules/doc/Roles.md#0x1_Roles_AbortsIfNotTreasuryCompliance">Roles::AbortsIfNotTreasuryCompliance</a>{account: tc_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_parent_vasp_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_parent_vasp_account_call_graph.svg)
 
 
 </details>
@@ -1398,6 +1452,15 @@ Only the Treasury Compliance account can create Designated Dealer accounts [[A5]
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_designated_dealer" calls</summary>
+
+
+![](img/AccountCreationScripts_create_designated_dealer_call_graph.svg)
+
+
+</details>
+
 
 ---
 
@@ -1422,6 +1485,24 @@ This module holds transactions that can be used to administer accounts in the Di
 </code></pre>
 
 
+
+<details>
+<summary>Show all the modules that "AccountAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/AccountAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/AccountAdministrationScripts_backward_dep.svg)
+
+
+</details>
 
 <a name="0x1_AccountAdministrationScripts_add_currency_to_account"></a>
 
@@ -1519,6 +1600,15 @@ and Child VASPs can hold balances [[D1]][ROLE][[D2]][ROLE][[D3]][ROLE][[D4]][ROL
 <pre><code><b>aborts_if</b> !<a href="../modules/doc/Roles.md#0x1_Roles_can_hold_balance">Roles::can_hold_balance</a>(account) <b>with</b> <a href="_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_currency_to_account" calls</summary>
+
+
+![](img/AccountAdministrationScripts_add_currency_to_account_call_graph.svg)
 
 
 </details>
@@ -1637,6 +1727,15 @@ resource stored under the account at <code>recovery_address</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_recovery_rotation_capability" calls</summary>
+
+
+![](img/AccountAdministrationScripts_add_recovery_rotation_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_publish_shared_ed25519_public_key"></a>
 
 ##### Function `publish_shared_ed25519_public_key`
@@ -1721,6 +1820,15 @@ containing the 32-byte ed25519 <code>public_key</code> and the <code><a href="..
     <a href="_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "publish_shared_ed25519_public_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_publish_shared_ed25519_public_key_call_graph.svg)
 
 
 </details>
@@ -1830,6 +1938,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 <pre><code><b>include</b> <a href="../modules/doc/DiemAccount.md#0x1_DiemAccount_AbortsIfDelegatedKeyRotationCapability">DiemAccount::AbortsIfDelegatedKeyRotationCapability</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_call_graph.svg)
 
 
 </details>
@@ -1948,6 +2065,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 <pre><code><b>include</b> <a href="../modules/doc/DiemAccount.md#0x1_DiemAccount_AbortsIfDelegatedKeyRotationCapability">DiemAccount::AbortsIfDelegatedKeyRotationCapability</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_nonce" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_nonce_call_graph.svg)
 
 
 </details>
@@ -2078,6 +2204,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_nonce_admin" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_nonce_admin_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_rotate_authentication_key_with_recovery_address"></a>
 
 ##### Function `rotate_authentication_key_with_recovery_address`
@@ -2187,6 +2322,15 @@ the delegatee's address or the address to recover [[H17]][PERMISSION][[J17]][PER
 <b>aborts_if</b> !(account_addr == recovery_address || account_addr == to_recover) <b>with</b> <a href="_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_recovery_address" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_recovery_address_call_graph.svg)
 
 
 </details>
@@ -2306,6 +2450,15 @@ Credential is granted to either a Parent VASP or a designated dealer [[H16]][PER
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_dual_attestation_info" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_dual_attestation_info_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_rotate_shared_ed25519_public_key"></a>
 
 ##### Function `rotate_shared_ed25519_public_key`
@@ -2388,6 +2541,15 @@ rotates the authentication key using the capability stored in <code>account</cod
     <a href="_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_shared_ed25519_public_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_shared_ed25519_public_key_call_graph.svg)
 
 
 </details>
@@ -2494,6 +2656,15 @@ may be used as a recovery account for those accounts.
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_recovery_address" calls</summary>
+
+
+![](img/AccountAdministrationScripts_create_recovery_address_call_graph.svg)
+
+
+</details>
+
 
 ---
 
@@ -2515,6 +2686,24 @@ Any account that can hold a balance can use the transaction scripts within this 
 </code></pre>
 
 
+
+<details>
+<summary>Show all the modules that "PaymentScripts" depends on directly or indirectly</summary>
+
+
+![](img/PaymentScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "PaymentScripts" directly or indirectly</summary>
+
+
+![](img/PaymentScripts_backward_dep.svg)
+
+
+</details>
 
 <a name="0x1_PaymentScripts_peer_to_peer_with_metadata"></a>
 
@@ -2673,6 +2862,15 @@ Parent VASPs, and Child VASPs can hold balances [[D1]][ROLE][[D2]][ROLE][[D3]][R
 
 </details>
 
+<details>
+<summary>Show all the functions that "peer_to_peer_with_metadata" calls</summary>
+
+
+![](img/PaymentScripts_peer_to_peer_with_metadata_call_graph.svg)
+
+
+</details>
+
 
 ---
 
@@ -2695,6 +2893,24 @@ Parent VASPs, and Child VASPs can hold balances [[D1]][ROLE][[D2]][ROLE][[D3]][R
 </code></pre>
 
 
+
+<details>
+<summary>Show all the modules that "ValidatorAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/ValidatorAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "ValidatorAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/ValidatorAdministrationScripts_backward_dep.svg)
+
+
+</details>
 
 <a name="0x1_ValidatorAdministrationScripts_add_validator_and_reconfigure"></a>
 
@@ -2837,6 +3053,15 @@ Only the Diem Root account can add Validators [[H13]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_validator_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_add_validator_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorAdministrationScripts_register_validator_config"></a>
 
 ##### Function `register_validator_config`
@@ -2956,6 +3181,15 @@ update the validator's configuration [[H14]][PERMISSION].
                 <b>with</b> <a href="_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "register_validator_config" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_register_validator_config_call_graph.svg)
 
 
 </details>
@@ -3093,6 +3327,15 @@ Only the Diem Root account can remove Validators [[H13]][PERMISSION].
 <pre><code><b>include</b> <a href="../modules/doc/Roles.md#0x1_Roles_AbortsIfNotDiemRoot">Roles::AbortsIfNotDiemRoot</a>{account: dr_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "remove_validator_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_remove_validator_and_reconfigure_call_graph.svg)
 
 
 </details>
@@ -3247,6 +3490,15 @@ update the validator's configuration [[H14]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_validator_config_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_config_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorAdministrationScripts_set_validator_operator"></a>
 
 ##### Function `set_validator_operator`
@@ -3370,6 +3622,15 @@ Only a Validator account can set its Validator Operator [[H15]][PERMISSION].
 <pre><code><b>include</b> <a href="../modules/doc/Roles.md#0x1_Roles_AbortsIfNotValidator">Roles::AbortsIfNotValidator</a>{validator_addr: account_addr};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_validator_operator" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_operator_call_graph.svg)
 
 
 </details>
@@ -3513,6 +3774,15 @@ Only a Validator account can set its Validator Operator [[H15]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_validator_operator_with_nonce_admin" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_operator_with_nonce_admin_call_graph.svg)
+
+
+</details>
+
 
 ---
 
@@ -3545,6 +3815,24 @@ per-transaction basis.
 </code></pre>
 
 
+
+<details>
+<summary>Show all the modules that "TreasuryComplianceScripts" depends on directly or indirectly</summary>
+
+
+![](img/TreasuryComplianceScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "TreasuryComplianceScripts" directly or indirectly</summary>
+
+
+![](img/TreasuryComplianceScripts_backward_dep.svg)
+
+
+</details>
 
 <a name="0x1_TreasuryComplianceScripts_cancel_burn_with_amount"></a>
 
@@ -3698,6 +3986,15 @@ Only the account with the burn capability can cancel burning [[H3]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "cancel_burn_with_amount" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_cancel_burn_with_amount_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_burn_with_amount"></a>
 
 ##### Function `burn_with_amount`
@@ -3831,6 +4128,15 @@ Only the account with the burn capability can burn coins [[H3]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn_with_amount" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_burn_with_amount_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_preburn"></a>
 
 ##### Function `preburn`
@@ -3956,6 +4262,15 @@ Only the account with a Preburn resource or PreburnQueue resource can preburn [[
 
 </details>
 
+<details>
+<summary>Show all the functions that "preburn" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_preburn_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_burn_txn_fees"></a>
 
 ##### Function `burn_txn_fees`
@@ -4035,6 +4350,15 @@ held in the <code><a href="../modules/doc/Diem.md#0x1_Diem_CurrencyInfo">Diem::C
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_txn_fees" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_burn_txn_fees_call_graph.svg)
 
 
 </details>
@@ -4179,6 +4503,15 @@ Only the Treasury Compliance account can mint [[H1]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "tiered_mint" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_tiered_mint_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_freeze_account"></a>
 
 ##### Function `freeze_account`
@@ -4271,6 +4604,15 @@ under <code>0xA550C18</code> with the <code>frozen_address</code> being the <cod
 
 </details>
 
+<details>
+<summary>Show all the functions that "freeze_account" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_freeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_unfreeze_account"></a>
 
 ##### Function `unfreeze_account`
@@ -4353,6 +4695,15 @@ the <code>unfrozen_address</code> set the <code>to_unfreeze_account</code>'s add
 
 </details>
 
+<details>
+<summary>Show all the functions that "unfreeze_account" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_unfreeze_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_update_dual_attestation_limit"></a>
 
 ##### Function `update_dual_attestation_limit`
@@ -4426,6 +4777,15 @@ Updates the <code>micro_xdx_limit</code> field of the <code><a href="../modules/
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_dual_attestation_limit" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_dual_attestation_limit_call_graph.svg)
 
 
 </details>
@@ -4558,6 +4918,15 @@ Only the Treasury Compliance account can update the exchange rate [[H5]][PERMISS
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_exchange_rate" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_exchange_rate_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_TreasuryComplianceScripts_update_minting_ability"></a>
 
 ##### Function `update_minting_ability`
@@ -4632,6 +5001,15 @@ This transaction needs to be sent by the Treasury Compliance account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_minting_ability" calls</summary>
+
+
+![](img/TreasuryComplianceScripts_update_minting_ability_call_graph.svg)
+
+
+</details>
+
 
 ---
 
@@ -4654,6 +5032,24 @@ network outside of validators and validator operators.
 </code></pre>
 
 
+
+<details>
+<summary>Show all the modules that "SystemAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/SystemAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "SystemAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/SystemAdministrationScripts_backward_dep.svg)
+
+
+</details>
 
 <a name="0x1_SystemAdministrationScripts_update_diem_version"></a>
 
@@ -4718,6 +5114,15 @@ preserve backwards compatibility with previous major versions of the VM.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_diem_version" calls</summary>
+
+
+![](img/SystemAdministrationScripts_update_diem_version_call_graph.svg)
 
 
 </details>

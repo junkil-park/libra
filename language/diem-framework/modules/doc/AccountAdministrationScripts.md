@@ -78,6 +78,24 @@ This module holds transactions that can be used to administer accounts in the Di
 
 
 
+<details>
+<summary>Show all the modules that "AccountAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/AccountAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/AccountAdministrationScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_add_currency_to_account"></a>
 
 ## Function `add_currency_to_account`
@@ -174,6 +192,15 @@ and Child VASPs can hold balances [[D1]][ROLE][[D2]][ROLE][[D3]][ROLE][[D4]][ROL
 <pre><code><b>aborts_if</b> !<a href="Roles.md#0x1_Roles_can_hold_balance">Roles::can_hold_balance</a>(account) <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_currency_to_account" calls</summary>
+
+
+![](img/AccountAdministrationScripts_add_currency_to_account_call_graph.svg)
 
 
 </details>
@@ -292,6 +319,15 @@ resource stored under the account at <code>recovery_address</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_recovery_rotation_capability" calls</summary>
+
+
+![](img/AccountAdministrationScripts_add_recovery_rotation_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_publish_shared_ed25519_public_key"></a>
 
 ## Function `publish_shared_ed25519_public_key`
@@ -376,6 +412,15 @@ containing the 32-byte ed25519 <code>public_key</code> and the <code><a href="Di
     <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "publish_shared_ed25519_public_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_publish_shared_ed25519_public_key_call_graph.svg)
 
 
 </details>
@@ -485,6 +530,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 <pre><code><b>include</b> <a href="DiemAccount.md#0x1_DiemAccount_AbortsIfDelegatedKeyRotationCapability">DiemAccount::AbortsIfDelegatedKeyRotationCapability</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_call_graph.svg)
 
 
 </details>
@@ -603,6 +657,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 <pre><code><b>include</b> <a href="DiemAccount.md#0x1_DiemAccount_AbortsIfDelegatedKeyRotationCapability">DiemAccount::AbortsIfDelegatedKeyRotationCapability</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_nonce" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_nonce_call_graph.svg)
 
 
 </details>
@@ -733,6 +796,15 @@ it has delegrated the capability [[H17]][PERMISSION][[J17]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_nonce_admin" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_nonce_admin_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_rotate_authentication_key_with_recovery_address"></a>
 
 ## Function `rotate_authentication_key_with_recovery_address`
@@ -842,6 +914,15 @@ the delegatee's address or the address to recover [[H17]][PERMISSION][[J17]][PER
 <b>aborts_if</b> !(account_addr == recovery_address || account_addr == to_recover) <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_authentication_key_with_recovery_address" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_authentication_key_with_recovery_address_call_graph.svg)
 
 
 </details>
@@ -961,6 +1042,15 @@ Credential is granted to either a Parent VASP or a designated dealer [[H16]][PER
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_dual_attestation_info" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_dual_attestation_info_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountAdministrationScripts_rotate_shared_ed25519_public_key"></a>
 
 ## Function `rotate_shared_ed25519_public_key`
@@ -1043,6 +1133,15 @@ rotates the authentication key using the capability stored in <code>account</cod
     <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_shared_ed25519_public_key" calls</summary>
+
+
+![](img/AccountAdministrationScripts_rotate_shared_ed25519_public_key_call_graph.svg)
 
 
 </details>
@@ -1145,6 +1244,15 @@ may be used as a recovery account for those accounts.
     <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_ALREADY_PUBLISHED">Errors::ALREADY_PUBLISHED</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_recovery_address" calls</summary>
+
+
+![](img/AccountAdministrationScripts_create_recovery_address_call_graph.svg)
 
 
 </details>

@@ -41,6 +41,24 @@ to synchronize configuration changes for the validators.
 
 
 
+<details>
+<summary>Show all the modules that "DiemConfig" depends on directly or indirectly</summary>
+
+
+![](img/DiemConfig_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemConfig" directly or indirectly</summary>
+
+
+![](img/DiemConfig_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_DiemConfig"></a>
 
 ## Resource `DiemConfig`
@@ -332,6 +350,15 @@ Publishes <code><a href="DiemConfig.md#0x1_DiemConfig_Configuration">Configurati
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DiemConfig_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_get"></a>
 
 ## Function `get`
@@ -381,6 +408,15 @@ Returns a copy of <code>Config</code> value stored under <code>addr</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get" calls</summary>
+
+
+![](img/DiemConfig_get_call_graph.svg)
 
 
 </details>
@@ -482,6 +518,15 @@ generic type/specific invariant issue
 
 </details>
 
+<details>
+<summary>Show all the functions that "set" calls</summary>
+
+
+![](img/DiemConfig_set_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_set_with_capability_and_reconfigure"></a>
 
 ## Function `set_with_capability_and_reconfigure`
@@ -540,6 +585,15 @@ generic type/specific invariant issue
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_with_capability_and_reconfigure" calls</summary>
+
+
+![](img/DiemConfig_set_with_capability_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_disable_reconfiguration"></a>
 
 ## Function `disable_reconfiguration`
@@ -568,6 +622,15 @@ This function should only be used for offline WriteSet generation purpose and sh
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "disable_reconfiguration" calls</summary>
+
+
+![](img/DiemConfig_disable_reconfiguration_call_graph.svg)
 
 
 </details>
@@ -605,6 +668,15 @@ This function should only be used for offline WriteSet generation purpose and sh
 
 </details>
 
+<details>
+<summary>Show all the functions that "enable_reconfiguration" calls</summary>
+
+
+![](img/DiemConfig_enable_reconfiguration_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_reconfiguration_enabled"></a>
 
 ## Function `reconfiguration_enabled`
@@ -625,6 +697,15 @@ This function should only be used for offline WriteSet generation purpose and sh
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reconfiguration_enabled" calls</summary>
+
+
+![](img/DiemConfig_reconfiguration_enabled_call_graph.svg)
 
 
 </details>
@@ -694,6 +775,15 @@ generic type/specific invariant issue
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "publish_new_config_and_get_capability" calls</summary>
+
+
+![](img/DiemConfig_publish_new_config_and_get_capability_call_graph.svg)
 
 
 </details>
@@ -778,6 +868,15 @@ Does not trigger a reconfiguration.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_new_config" calls</summary>
+
+
+![](img/DiemConfig_publish_new_config_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_reconfigure"></a>
 
 ## Function `reconfigure`
@@ -817,6 +916,15 @@ Signal validators to start using new configuration. Must be called by Diem root.
 <b>include</b> <a href="DiemConfig.md#0x1_DiemConfig_ReconfigureAbortsIf">ReconfigureAbortsIf</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reconfigure" calls</summary>
+
+
+![](img/DiemConfig_reconfigure_call_graph.svg)
 
 
 </details>
@@ -979,6 +1087,15 @@ This schema is to be used by callers of <code>reconfigure</code>
 
 </details>
 
+<details>
+<summary>Show all the functions that "reconfigure_" calls</summary>
+
+
+![](img/DiemConfig_reconfigure__call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemConfig_emit_genesis_reconfiguration_event"></a>
 
 ## Function `emit_genesis_reconfiguration_event`
@@ -1033,6 +1150,15 @@ reconfiguration event.
 emits msg <b>to</b> handle;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "emit_genesis_reconfiguration_event" calls</summary>
+
+
+![](img/DiemConfig_emit_genesis_reconfiguration_event_call_graph.svg)
 
 
 </details>

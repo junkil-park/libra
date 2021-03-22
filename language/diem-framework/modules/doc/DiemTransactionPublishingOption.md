@@ -34,6 +34,24 @@ This module defines a struct storing the publishing policies for the VM.
 
 
 
+<details>
+<summary>Show all the modules that "DiemTransactionPublishingOption" depends on directly or indirectly</summary>
+
+
+![](img/DiemTransactionPublishingOption_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemTransactionPublishingOption" directly or indirectly</summary>
+
+
+![](img/DiemTransactionPublishingOption_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemTransactionPublishingOption_DiemTransactionPublishingOption"></a>
 
 ## Struct `DiemTransactionPublishingOption`
@@ -201,6 +219,15 @@ Must abort if the signer does not have the DiemRoot role [[H11]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTransactionPublishingOption_is_script_allowed"></a>
 
 ## Function `is_script_allowed`
@@ -263,6 +290,15 @@ Check if sender can execute script with <code>hash</code>
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_script_allowed" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_is_script_allowed_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTransactionPublishingOption_is_module_allowed"></a>
 
 ## Function `is_module_allowed`
@@ -298,6 +334,15 @@ Check if a sender can publish a module
 <pre><code><b>include</b> <a href="DiemConfig.md#0x1_DiemConfig_AbortsIfNotPublished">DiemConfig::AbortsIfNotPublished</a>&lt;<a href="DiemTransactionPublishingOption.md#0x1_DiemTransactionPublishingOption">DiemTransactionPublishingOption</a>&gt;{};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_module_allowed" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_is_module_allowed_call_graph.svg)
 
 
 </details>
@@ -343,6 +388,15 @@ Must abort if the signer does not have the DiemRoot role [[H11]][PERMISSION].
 <b>include</b> <a href="DiemConfig.md#0x1_DiemConfig_SetAbortsIf">DiemConfig::SetAbortsIf</a>&lt;<a href="DiemTransactionPublishingOption.md#0x1_DiemTransactionPublishingOption">DiemTransactionPublishingOption</a>&gt;{account: dr_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_open_script" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_set_open_script_call_graph.svg)
 
 
 </details>
@@ -393,6 +447,15 @@ Must abort if the signer does not have the DiemRoot role [[H11]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_open_module" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_set_open_module_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTransactionPublishingOption_halt_all_transactions"></a>
 
 ## Function `halt_all_transactions`
@@ -419,6 +482,15 @@ If called, transactions cannot be sent from any account except DiemRoot
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "halt_all_transactions" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_halt_all_transactions_call_graph.svg)
 
 
 </details>
@@ -455,6 +527,15 @@ If called, transactions can be sent from any account once again
 
 </details>
 
+<details>
+<summary>Show all the functions that "resume_transactions" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_resume_transactions_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemTransactionPublishingOption_transactions_halted"></a>
 
 ## Function `transactions_halted`
@@ -476,6 +557,15 @@ Return true if all non-administrative transactions are currently halted
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "transactions_halted" calls</summary>
+
+
+![](img/DiemTransactionPublishingOption_transactions_halted_call_graph.svg)
 
 
 </details>

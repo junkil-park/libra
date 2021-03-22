@@ -36,6 +36,24 @@ This module provides functions to manage VASP accounts.
 
 
 
+<details>
+<summary>Show all the modules that "VASP" depends on directly or indirectly</summary>
+
+
+![](img/VASP_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "VASP" directly or indirectly</summary>
+
+
+![](img/VASP_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_VASP_ParentVASP"></a>
 
 ## Resource `ParentVASP`
@@ -212,6 +230,15 @@ or if there is already a VASP (child or parent) at this account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_parent_vasp_credential" calls</summary>
+
+
+![](img/VASP_publish_parent_vasp_credential_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_VASP_publish_child_vasp_credential"></a>
 
 ## Function `publish_child_vasp_credential`
@@ -302,6 +329,15 @@ Aborts if <code>parent</code> is not a ParentVASP
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_child_vasp_credential" calls</summary>
+
+
+![](img/VASP_publish_child_vasp_credential_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_VASP_has_account_limits"></a>
 
 ## Function `has_account_limits`
@@ -325,6 +361,15 @@ Aborts if <code>addr</code> is not a VASP
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_account_limits" calls</summary>
+
+
+![](img/VASP_has_account_limits_call_graph.svg)
 
 
 </details>
@@ -396,6 +441,15 @@ Spec version of <code><a href="VASP.md#0x1_VASP_parent_address">Self::parent_add
 
 </details>
 
+<details>
+<summary>Show all the functions that "parent_address" calls</summary>
+
+
+![](img/VASP_parent_address_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_VASP_is_parent"></a>
 
 ## Function `is_parent`
@@ -435,6 +489,15 @@ Returns true if <code>addr</code> is a parent VASP.
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_parent" calls</summary>
+
+
+![](img/VASP_is_parent_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_VASP_is_child"></a>
 
 ## Function `is_child`
@@ -470,6 +533,15 @@ Returns true if <code>addr</code> is a child VASP.
 <b>ensures</b> result == <a href="VASP.md#0x1_VASP_is_child">is_child</a>(addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_child" calls</summary>
+
+
+![](img/VASP_is_child_call_graph.svg)
 
 
 </details>
@@ -525,6 +597,15 @@ Returns true if <code>addr</code> is a VASP.
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_vasp" calls</summary>
+
+
+![](img/VASP_is_vasp_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_VASP_is_same_vasp"></a>
 
 ## Function `is_same_vasp`
@@ -572,6 +653,15 @@ Spec version of <code><a href="VASP.md#0x1_VASP_is_same_vasp">Self::is_same_vasp
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_same_vasp" calls</summary>
+
+
+![](img/VASP_is_same_vasp_call_graph.svg)
 
 
 </details>
@@ -625,6 +715,15 @@ Spec version of <code><a href="VASP.md#0x1_VASP_num_children">Self::num_children
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "num_children" calls</summary>
+
+
+![](img/VASP_num_children_call_graph.svg)
 
 
 </details>

@@ -47,6 +47,24 @@ and "configuration" are used for several distinct concepts.
 
 
 
+<details>
+<summary>Show all the modules that "DiemSystem" depends on directly or indirectly</summary>
+
+
+![](img/DiemSystem_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemSystem" directly or indirectly</summary>
+
+
+![](img/DiemSystem_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_ValidatorInfo"></a>
 
 ## Struct `ValidatorInfo`
@@ -354,6 +372,15 @@ Must be invoked by the Diem root a single time in Genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_validator_set" calls</summary>
+
+
+![](img/DiemSystem_initialize_validator_set_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_set_diem_system_config"></a>
 
 ## Function `set_diem_system_config`
@@ -409,6 +436,15 @@ Called by the add, remove, and update functions.
 <b>include</b> <a href="DiemConfig.md#0x1_DiemConfig_ReconfigureEmits">DiemConfig::ReconfigureEmits</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_diem_system_config" calls</summary>
+
+
+![](img/DiemSystem_set_diem_system_config_call_graph.svg)
 
 
 </details>
@@ -539,6 +575,15 @@ a ValidatorRole
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_validator" calls</summary>
+
+
+![](img/DiemSystem_add_validator_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_remove_validator"></a>
 
 ## Function `remove_validator`
@@ -628,6 +673,15 @@ in validator_set
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "remove_validator" calls</summary>
+
+
+![](img/DiemSystem_remove_validator_call_graph.svg)
 
 
 </details>
@@ -807,6 +861,15 @@ DIP-6 property
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_config_and_reconfigure" calls</summary>
+
+
+![](img/DiemSystem_update_config_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_get_diem_system_config"></a>
 
 ## Function `get_diem_system_config`
@@ -842,6 +905,15 @@ Get the DiemSystem configuration from DiemConfig
 <b>ensures</b> result == <a href="DiemConfig.md#0x1_DiemConfig_get">DiemConfig::get</a>&lt;<a href="DiemSystem.md#0x1_DiemSystem">DiemSystem</a>&gt;();
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_diem_system_config" calls</summary>
+
+
+![](img/DiemSystem_get_diem_system_config_call_graph.svg)
 
 
 </details>
@@ -896,6 +968,15 @@ Return true if <code>addr</code> is in the current validator set
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_validator" calls</summary>
+
+
+![](img/DiemSystem_is_validator_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_get_validator_config"></a>
 
 ## Function `get_validator_config`
@@ -941,6 +1022,15 @@ Returns validator config. Aborts if <code>addr</code> is not in the validator se
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_validator_config" calls</summary>
+
+
+![](img/DiemSystem_get_validator_config_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_validator_set_size"></a>
 
 ## Function `validator_set_size`
@@ -976,6 +1066,15 @@ Return the size of the current validator set
 <b>ensures</b> result == len(<a href="DiemSystem.md#0x1_DiemSystem_spec_get_validators">spec_get_validators</a>());
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "validator_set_size" calls</summary>
+
+
+![](img/DiemSystem_validator_set_size_call_graph.svg)
 
 
 </details>
@@ -1017,6 +1116,15 @@ Get the <code>i</code>'th validator address in the validator set.
 <b>ensures</b> result == <a href="DiemSystem.md#0x1_DiemSystem_spec_get_validators">spec_get_validators</a>()[i].addr;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_ith_validator_address" calls</summary>
+
+
+![](img/DiemSystem_get_ith_validator_address_call_graph.svg)
 
 
 </details>
@@ -1103,6 +1211,15 @@ that there is exactly one such address.
             };
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_validator_index_" calls</summary>
+
+
+![](img/DiemSystem_get_validator_index__call_graph.svg)
 
 
 </details>
@@ -1225,6 +1342,15 @@ prove (not sure why).
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_ith_validator_info_" calls</summary>
+
+
+![](img/DiemSystem_update_ith_validator_info__call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemSystem_is_validator_"></a>
 
 ## Function `is_validator_`
@@ -1260,6 +1386,15 @@ Private function checks for membership of <code>addr</code> in validator set.
 <b>ensures</b> result == (<b>exists</b> v in validators_vec_ref: v.addr == addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_validator_" calls</summary>
+
+
+![](img/DiemSystem_is_validator__call_graph.svg)
 
 
 </details>

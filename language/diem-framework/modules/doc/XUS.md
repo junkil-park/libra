@@ -20,6 +20,24 @@ This module defines the coin type XUS and its initialization function.
 
 
 
+<details>
+<summary>Show all the modules that "XUS" depends on directly or indirectly</summary>
+
+
+![](img/XUS_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "XUS" directly or indirectly</summary>
+
+
+![](img/XUS_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_XUS_XUS"></a>
 
 ## Struct `XUS`
@@ -121,6 +139,15 @@ Moreover, only a TreasuryCompliance account can have the BurnCapability [[H3]][P
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotTreasuryCompliance">Roles::AbortsIfNotTreasuryCompliance</a>{account: tc_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/XUS_initialize_call_graph.svg)
 
 
 </details>

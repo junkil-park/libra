@@ -27,6 +27,24 @@ Module providing functionality for designated dealers.
 
 
 
+<details>
+<summary>Show all the modules that "DesignatedDealer" depends on directly or indirectly</summary>
+
+
+![](img/DesignatedDealer_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DesignatedDealer" directly or indirectly</summary>
+
+
+![](img/DesignatedDealer_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DesignatedDealer_Dealer"></a>
 
 ## Resource `Dealer`
@@ -227,6 +245,15 @@ for each known currency at launch.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_designated_dealer_credential" calls</summary>
+
+
+![](img/DesignatedDealer_publish_designated_dealer_credential_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DesignatedDealer_add_currency"></a>
 
 ## Function `add_currency`
@@ -287,6 +314,15 @@ multi-signer transactions in order to add a new currency to an existing DD.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_currency" calls</summary>
+
+
+![](img/DesignatedDealer_add_currency_call_graph.svg)
 
 
 </details>
@@ -381,6 +417,15 @@ multi-signer transactions in order to add a new currency to an existing DD.
 
 </details>
 
+<details>
+<summary>Show all the functions that "tiered_mint" calls</summary>
+
+
+![](img/DesignatedDealer_tiered_mint_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DesignatedDealer_exists_at"></a>
 
 ## Function `exists_at`
@@ -415,6 +460,15 @@ multi-signer transactions in order to add a new currency to an existing DD.
 <b>ensures</b> result == <b>exists</b>&lt;<a href="DesignatedDealer.md#0x1_DesignatedDealer_Dealer">Dealer</a>&gt;(dd_addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "exists_at" calls</summary>
+
+
+![](img/DesignatedDealer_exists_at_call_graph.svg)
 
 
 </details>

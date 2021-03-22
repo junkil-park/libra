@@ -51,6 +51,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "ValidatorAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/ValidatorAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "ValidatorAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/ValidatorAdministrationScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorAdministrationScripts_add_validator_and_reconfigure"></a>
 
 ## Function `add_validator_and_reconfigure`
@@ -192,6 +210,15 @@ Only the Diem Root account can add Validators [[H13]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_validator_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_add_validator_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorAdministrationScripts_register_validator_config"></a>
 
 ## Function `register_validator_config`
@@ -311,6 +338,15 @@ update the validator's configuration [[H14]][PERMISSION].
                 <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "register_validator_config" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_register_validator_config_call_graph.svg)
 
 
 </details>
@@ -448,6 +484,15 @@ Only the Diem Root account can remove Validators [[H13]][PERMISSION].
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotDiemRoot">Roles::AbortsIfNotDiemRoot</a>{account: dr_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "remove_validator_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_remove_validator_and_reconfigure_call_graph.svg)
 
 
 </details>
@@ -602,6 +647,15 @@ update the validator's configuration [[H14]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_validator_config_and_reconfigure" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_config_and_reconfigure_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorAdministrationScripts_set_validator_operator"></a>
 
 ## Function `set_validator_operator`
@@ -725,6 +779,15 @@ Only a Validator account can set its Validator Operator [[H15]][PERMISSION].
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotValidator">Roles::AbortsIfNotValidator</a>{validator_addr: account_addr};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_validator_operator" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_operator_call_graph.svg)
 
 
 </details>
@@ -864,6 +927,15 @@ Only a Validator account can set its Validator Operator [[H15]][PERMISSION].
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotValidator">Roles::AbortsIfNotValidator</a>{validator_addr: account_addr};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_validator_operator_with_nonce_admin" calls</summary>
+
+
+![](img/ValidatorAdministrationScripts_set_validator_operator_with_nonce_admin_call_graph.svg)
 
 
 </details>

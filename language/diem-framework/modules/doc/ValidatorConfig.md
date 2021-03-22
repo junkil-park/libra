@@ -42,6 +42,24 @@ of the <code><a href="DiemSystem.md#0x1_DiemSystem_DiemSystem">DiemSystem::DiemS
 
 
 
+<details>
+<summary>Show all the modules that "ValidatorConfig" depends on directly or indirectly</summary>
+
+
+![](img/ValidatorConfig_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "ValidatorConfig" directly or indirectly</summary>
+
+
+![](img/ValidatorConfig_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_Config"></a>
 
 ## Struct `Config`
@@ -237,6 +255,15 @@ and the address of the validator operator.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish" calls</summary>
+
+
+![](img/ValidatorConfig_publish_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_exists_config"></a>
 
 ## Function `exists_config`
@@ -258,6 +285,15 @@ Returns true if a ValidatorConfig resource exists under addr.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "exists_config" calls</summary>
+
+
+![](img/ValidatorConfig_exists_config_call_graph.svg)
 
 
 </details>
@@ -364,6 +400,15 @@ The signer can only change its own operator account [[H15]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_operator" calls</summary>
+
+
+![](img/ValidatorConfig_set_operator_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_remove_operator"></a>
 
 ## Function `remove_operator`
@@ -418,6 +463,15 @@ The signer can only change its own operator account [[H15]][PERMISSION].
     <b>global</b>&lt;<a href="ValidatorConfig.md#0x1_ValidatorConfig">ValidatorConfig</a>&gt;(addr).operator_account == <b>old</b>(<b>global</b>&lt;<a href="ValidatorConfig.md#0x1_ValidatorConfig">ValidatorConfig</a>&gt;(addr).operator_account);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "remove_operator" calls</summary>
+
+
+![](img/ValidatorConfig_remove_operator_call_graph.svg)
 
 
 </details>
@@ -510,6 +564,15 @@ of the DiemSystem's code.
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_config" calls</summary>
+
+
+![](img/ValidatorConfig_set_config_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_is_valid"></a>
 
 ## Function `is_valid`
@@ -550,6 +613,15 @@ all validators in the Validator Set are valid
 <b>ensures</b> result == <a href="ValidatorConfig.md#0x1_ValidatorConfig_is_valid">is_valid</a>(addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_valid" calls</summary>
+
+
+![](img/ValidatorConfig_is_valid_call_graph.svg)
 
 
 </details>
@@ -610,6 +682,15 @@ Returns the config published under addr.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_config" calls</summary>
+
+
+![](img/ValidatorConfig_get_config_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_get_human_name"></a>
 
 ## Function `get_human_name`
@@ -648,6 +729,15 @@ Aborts if there is no ValidatorConfig resource
 <b>ensures</b> result == <a href="ValidatorConfig.md#0x1_ValidatorConfig_get_human_name">get_human_name</a>(addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_human_name" calls</summary>
+
+
+![](img/ValidatorConfig_get_human_name_call_graph.svg)
 
 
 </details>
@@ -709,6 +799,15 @@ if the operator_account is unset
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_operator" calls</summary>
+
+
+![](img/ValidatorConfig_get_operator_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_get_consensus_pubkey"></a>
 
 ## Function `get_consensus_pubkey`
@@ -735,6 +834,15 @@ Never aborts
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_consensus_pubkey" calls</summary>
+
+
+![](img/ValidatorConfig_get_consensus_pubkey_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorConfig_get_validator_network_addresses"></a>
 
 ## Function `get_validator_network_addresses`
@@ -757,6 +865,15 @@ Never aborts
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_validator_network_addresses" calls</summary>
+
+
+![](img/ValidatorConfig_get_validator_network_addresses_call_graph.svg)
 
 
 </details>

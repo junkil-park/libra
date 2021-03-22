@@ -24,6 +24,24 @@ and MultiEd25519 (K-of-N multisig).
 
 
 
+<details>
+<summary>Show all the modules that "Authenticator" depends on directly or indirectly</summary>
+
+
+![](img/Authenticator_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "Authenticator" directly or indirectly</summary>
+
+
+![](img/Authenticator_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_Authenticator_MultiEd25519PublicKey"></a>
 
 ## Struct `MultiEd25519PublicKey`
@@ -168,6 +186,15 @@ Aborts if threshold is zero or bigger than the length of <code>public_keys</code
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_multi_ed25519" calls</summary>
+
+
+![](img/Authenticator_create_multi_ed25519_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Authenticator_ed25519_authentication_key"></a>
 
 ## Function `ed25519_authentication_key`
@@ -215,6 +242,15 @@ does not matter for the verification of callers.
 <pre><code><b>define</b> <a href="Authenticator.md#0x1_Authenticator_spec_ed25519_authentication_key">spec_ed25519_authentication_key</a>(public_key: vector&lt;u8&gt;): vector&lt;u8&gt;;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "ed25519_authentication_key" calls</summary>
+
+
+![](img/Authenticator_ed25519_authentication_key_call_graph.svg)
 
 
 </details>
@@ -283,6 +319,15 @@ does not matter for the verification of callers.
 
 </details>
 
+<details>
+<summary>Show all the functions that "multi_ed25519_authentication_key" calls</summary>
+
+
+![](img/Authenticator_multi_ed25519_authentication_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Authenticator_public_keys"></a>
 
 ## Function `public_keys`
@@ -308,6 +353,15 @@ Return the public keys involved in the multisig policy <code>k</code>
 
 </details>
 
+<details>
+<summary>Show all the functions that "public_keys" calls</summary>
+
+
+![](img/Authenticator_public_keys_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Authenticator_threshold"></a>
 
 ## Function `threshold`
@@ -329,6 +383,15 @@ Return the threshold for the multisig policy <code>k</code>
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "threshold" calls</summary>
+
+
+![](img/Authenticator_threshold_call_graph.svg)
 
 
 </details>

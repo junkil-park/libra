@@ -28,6 +28,24 @@ Module providing well-known addresses and related logic.
 
 
 
+<details>
+<summary>Show all the modules that "CoreAddresses" depends on directly or indirectly</summary>
+
+
+![](img/CoreAddresses_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "CoreAddresses" directly or indirectly</summary>
+
+
+![](img/CoreAddresses_backward_dep.svg)
+
+
+</details>
+
 <a name="@Constants_0"></a>
 
 ## Constants
@@ -101,6 +119,15 @@ accounts on-chain.
 
 </details>
 
+<details>
+<summary>Show all the functions that "DIEM_ROOT_ADDRESS" calls</summary>
+
+
+![](img/CoreAddresses_DIEM_ROOT_ADDRESS_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_CoreAddresses_CURRENCY_INFO_ADDRESS"></a>
 
 ## Function `CURRENCY_INFO_ADDRESS`
@@ -129,6 +156,15 @@ be this from an operational viewpoint, so this is why this is separated out.
 
 </details>
 
+<details>
+<summary>Show all the functions that "CURRENCY_INFO_ADDRESS" calls</summary>
+
+
+![](img/CoreAddresses_CURRENCY_INFO_ADDRESS_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_CoreAddresses_TREASURY_COMPLIANCE_ADDRESS"></a>
 
 ## Function `TREASURY_COMPLIANCE_ADDRESS`
@@ -152,6 +188,15 @@ operations. The account at this address is created in genesis.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "TREASURY_COMPLIANCE_ADDRESS" calls</summary>
+
+
+![](img/CoreAddresses_TREASURY_COMPLIANCE_ADDRESS_call_graph.svg)
 
 
 </details>
@@ -184,6 +229,15 @@ is no signer for the transaction.
 
 </details>
 
+<details>
+<summary>Show all the functions that "VM_RESERVED_ADDRESS" calls</summary>
+
+
+![](img/CoreAddresses_VM_RESERVED_ADDRESS_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_CoreAddresses_CORE_CODE_ADDRESS"></a>
 
 ## Function `CORE_CODE_ADDRESS`
@@ -206,6 +260,15 @@ account can be created at this address.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "CORE_CODE_ADDRESS" calls</summary>
+
+
+![](img/CoreAddresses_CORE_CODE_ADDRESS_call_graph.svg)
 
 
 </details>
@@ -258,6 +321,15 @@ Specifies that a function aborts if the account does not have the Diem root addr
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_diem_root" calls</summary>
+
+
+![](img/CoreAddresses_assert_diem_root_call_graph.svg)
 
 
 </details>
@@ -317,6 +389,15 @@ Specifies that a function aborts if the account does not have the treasury compl
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_treasury_compliance" calls</summary>
+
+
+![](img/CoreAddresses_assert_treasury_compliance_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_CoreAddresses_assert_vm"></a>
 
 ## Function `assert_vm`
@@ -369,6 +450,15 @@ Specifies that a function aborts if the account does not have the VM reserved ad
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_vm" calls</summary>
+
+
+![](img/CoreAddresses_assert_vm_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_CoreAddresses_assert_currency_info"></a>
 
 ## Function `assert_currency_info`
@@ -417,6 +507,15 @@ Specifies that a function aborts if the account has not the currency info addres
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_currency_info" calls</summary>
+
+
+![](img/CoreAddresses_assert_currency_info_call_graph.svg)
 
 
 </details>

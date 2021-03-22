@@ -37,6 +37,24 @@ a given time period.
 
 
 
+<details>
+<summary>Show all the modules that "AccountLimits" depends on directly or indirectly</summary>
+
+
+![](img/AccountLimits_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountLimits" directly or indirectly</summary>
+
+
+![](img/AccountLimits_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_AccountLimitMutationCapability"></a>
 
 ## Resource `AccountLimitMutationCapability`
@@ -270,6 +288,15 @@ need to be a unique capability.
 
 </details>
 
+<details>
+<summary>Show all the functions that "grant_mutation_capability" calls</summary>
+
+
+![](img/AccountLimits_grant_mutation_capability_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_update_deposit_limits"></a>
 
 ## Function `update_deposit_limits`
@@ -357,6 +384,15 @@ Returns false if this deposit violates the account limits.
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_deposit_limits" calls</summary>
+
+
+![](img/AccountLimits_update_deposit_limits_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_update_withdrawal_limits"></a>
 
 ## Function `update_withdrawal_limits`
@@ -428,6 +464,15 @@ Returns <code><b>false</b></code> if this withdrawal violates account limits.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_withdrawal_limits" calls</summary>
+
+
+![](img/AccountLimits_update_withdrawal_limits_call_graph.svg)
 
 
 </details>
@@ -517,6 +562,15 @@ Only ParentVASP and ChildVASP can have the account limits [[E1]][ROLE][[E2]][ROL
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_window" calls</summary>
+
+
+![](img/AccountLimits_publish_window_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_publish_unrestricted_limits"></a>
 
 ## Function `publish_unrestricted_limits`
@@ -602,6 +656,15 @@ XUS about LimitsDefinition<XUS>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_unrestricted_limits" calls</summary>
+
+
+![](img/AccountLimits_publish_unrestricted_limits_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_update_limits_definition"></a>
 
 ## Function `update_limits_definition`
@@ -641,6 +704,15 @@ TODO: This should be specified.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_limits_definition" calls</summary>
+
+
+![](img/AccountLimits_update_limits_definition_call_graph.svg)
 
 
 </details>
@@ -685,6 +757,15 @@ TODO(wrwg): specify
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_window_info" calls</summary>
+
+
+![](img/AccountLimits_update_window_info_call_graph.svg)
 
 
 </details>
@@ -790,6 +871,15 @@ the inflow and outflow records.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reset_window" calls</summary>
+
+
+![](img/AccountLimits_reset_window_call_graph.svg)
 
 
 </details>
@@ -974,6 +1064,15 @@ Checks whether receiving limits are satisfied.
 
 </details>
 
+<details>
+<summary>Show all the functions that "can_receive_and_update_window" calls</summary>
+
+
+![](img/AccountLimits_can_receive_and_update_window_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_can_withdraw_and_update_window"></a>
 
 ## Function `can_withdraw_and_update_window`
@@ -1113,6 +1212,15 @@ Update outflow.
 
 </details>
 
+<details>
+<summary>Show all the functions that "can_withdraw_and_update_window" calls</summary>
+
+
+![](img/AccountLimits_can_withdraw_and_update_window_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_is_unrestricted"></a>
 
 ## Function `is_unrestricted`
@@ -1171,6 +1279,15 @@ Checks whether the limits definition is unrestricted.
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_unrestricted" calls</summary>
+
+
+![](img/AccountLimits_is_unrestricted_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_limits_definition_address"></a>
 
 ## Function `limits_definition_address`
@@ -1195,6 +1312,15 @@ Checks whether the limits definition is unrestricted.
 
 </details>
 
+<details>
+<summary>Show all the functions that "limits_definition_address" calls</summary>
+
+
+![](img/AccountLimits_limits_definition_address_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_has_limits_published"></a>
 
 ## Function `has_limits_published`
@@ -1215,6 +1341,15 @@ Checks whether the limits definition is unrestricted.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_limits_published" calls</summary>
+
+
+![](img/AccountLimits_has_limits_published_call_graph.svg)
 
 
 </details>
@@ -1266,6 +1401,15 @@ Checks whether the limits definition is unrestricted.
 
 </details>
 
+<details>
+<summary>Show all the functions that "has_window_published" calls</summary>
+
+
+![](img/AccountLimits_has_window_published_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountLimits_current_time"></a>
 
 ## Function `current_time`
@@ -1286,6 +1430,15 @@ Checks whether the limits definition is unrestricted.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "current_time" calls</summary>
+
+
+![](img/AccountLimits_current_time_call_graph.svg)
 
 
 </details>

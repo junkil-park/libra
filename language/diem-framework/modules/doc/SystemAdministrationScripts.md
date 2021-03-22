@@ -20,6 +20,24 @@ network outside of validators and validator operators.
 
 
 
+<details>
+<summary>Show all the modules that "SystemAdministrationScripts" depends on directly or indirectly</summary>
+
+
+![](img/SystemAdministrationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "SystemAdministrationScripts" directly or indirectly</summary>
+
+
+![](img/SystemAdministrationScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_SystemAdministrationScripts_update_diem_version"></a>
 
 ## Function `update_diem_version`
@@ -83,6 +101,15 @@ preserve backwards compatibility with previous major versions of the VM.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_diem_version" calls</summary>
+
+
+![](img/SystemAdministrationScripts_update_diem_version_call_graph.svg)
 
 
 </details>

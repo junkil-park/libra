@@ -32,6 +32,24 @@ when executing from a fresh state.
 
 
 
+<details>
+<summary>Show all the modules that "Genesis" depends on directly or indirectly</summary>
+
+
+![](img/Genesis_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "Genesis" directly or indirectly</summary>
+
+
+![](img/Genesis_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_Genesis_initialize"></a>
 
 ## Function `initialize`
@@ -143,6 +161,15 @@ Assume that this is called in genesis state (no timestamp).
 <pre><code><b>requires</b> <a href="DiemTimestamp.md#0x1_DiemTimestamp_is_genesis">DiemTimestamp::is_genesis</a>();
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/Genesis_initialize_call_graph.svg)
 
 
 </details>

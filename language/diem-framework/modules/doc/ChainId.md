@@ -25,6 +25,24 @@ This code provides a container for storing a chain id and functions to initializ
 
 
 
+<details>
+<summary>Show all the modules that "ChainId" depends on directly or indirectly</summary>
+
+
+![](img/ChainId_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "ChainId" directly or indirectly</summary>
+
+
+![](img/ChainId_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_ChainId_ChainId"></a>
 
 ## Resource `ChainId`
@@ -114,6 +132,15 @@ Publish the chain ID <code>id</code> of this Diem instance under the DiemRoot ac
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/ChainId_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ChainId_get"></a>
 
 ## Function `get`
@@ -136,6 +163,15 @@ Return the chain ID of this Diem instance
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get" calls</summary>
+
+
+![](img/ChainId_get_call_graph.svg)
 
 
 </details>

@@ -48,6 +48,24 @@ Module managing dual attestation.
 
 
 
+<details>
+<summary>Show all the modules that "DualAttestation" depends on directly or indirectly</summary>
+
+
+![](img/DualAttestation_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DualAttestation" directly or indirectly</summary>
+
+
+![](img/DualAttestation_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_Credential"></a>
 
 ## Resource `Credential`
@@ -408,6 +426,15 @@ The permission "RotateDualAttestationInfo" is granted to ParentVASP and Designat
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish_credential" calls</summary>
+
+
+![](img/DualAttestation_publish_credential_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_rotate_base_url"></a>
 
 ## Function `rotate_base_url`
@@ -536,6 +563,15 @@ The sender can only rotate its own base url [[H16]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_base_url" calls</summary>
+
+
+![](img/DualAttestation_rotate_base_url_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_rotate_compliance_public_key"></a>
 
 ## Function `rotate_compliance_public_key`
@@ -659,6 +695,15 @@ The sender only rotates its own compliance_public_key [[H16]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_compliance_public_key" calls</summary>
+
+
+![](img/DualAttestation_rotate_compliance_public_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_human_name"></a>
 
 ## Function `human_name`
@@ -696,6 +741,15 @@ Aborts if <code>addr</code> does not have a <code><a href="DualAttestation.md#0x
 <b>ensures</b> result == <b>global</b>&lt;<a href="DualAttestation.md#0x1_DualAttestation_Credential">Credential</a>&gt;(addr).human_name;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "human_name" calls</summary>
+
+
+![](img/DualAttestation_human_name_call_graph.svg)
 
 
 </details>
@@ -753,6 +807,15 @@ Spec version of <code><a href="DualAttestation.md#0x1_DualAttestation_base_url">
 
 </details>
 
+<details>
+<summary>Show all the functions that "base_url" calls</summary>
+
+
+![](img/DualAttestation_base_url_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_compliance_public_key"></a>
 
 ## Function `compliance_public_key`
@@ -806,6 +869,15 @@ Spec version of <code><a href="DualAttestation.md#0x1_DualAttestation_compliance
 
 </details>
 
+<details>
+<summary>Show all the functions that "compliance_public_key" calls</summary>
+
+
+![](img/DualAttestation_compliance_public_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_expiration_date"></a>
 
 ## Function `expiration_date`
@@ -843,6 +915,15 @@ Aborts if <code>addr</code> does not have a <code><a href="DualAttestation.md#0x
 <b>ensures</b> result == <b>global</b>&lt;<a href="DualAttestation.md#0x1_DualAttestation_Credential">Credential</a>&gt;(addr).expiration_date;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "expiration_date" calls</summary>
+
+
+![](img/DualAttestation_expiration_date_call_graph.svg)
 
 
 </details>
@@ -897,6 +978,15 @@ Return the address where the credentials for <code>addr</code> are stored
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "credential_address" calls</summary>
+
+
+![](img/DualAttestation_credential_address_call_graph.svg)
 
 
 </details>
@@ -998,6 +1088,15 @@ Helper functions which simulates <code><a href="DualAttestation.md#0x1_DualAttes
 
 </details>
 
+<details>
+<summary>Show all the functions that "dual_attestation_required" calls</summary>
+
+
+![](img/DualAttestation_dual_attestation_required_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_dual_attestation_message"></a>
 
 ## Function `dual_attestation_message`
@@ -1056,6 +1155,15 @@ the verification of callers.
 <pre><code><b>define</b> <a href="DualAttestation.md#0x1_DualAttestation_spec_dual_attestation_message">spec_dual_attestation_message</a>(payer: address, metadata: vector&lt;u8&gt;, deposit_value: u64): vector&lt;u8&gt;;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "dual_attestation_message" calls</summary>
+
+
+![](img/DualAttestation_dual_attestation_message_call_graph.svg)
 
 
 </details>
@@ -1171,6 +1279,15 @@ Returns true if signature is valid.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_signature_is_valid" calls</summary>
+
+
+![](img/DualAttestation_assert_signature_is_valid_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_assert_payment_ok"></a>
 
 ## Function `assert_payment_ok`
@@ -1244,6 +1361,15 @@ the conditions in (2) is not met.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_payment_ok" calls</summary>
+
+
+![](img/DualAttestation_assert_payment_ok_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_initialize"></a>
 
 ## Function `initialize`
@@ -1297,6 +1423,15 @@ Travel rule limit set during genesis
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DualAttestation_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DualAttestation_get_cur_microdiem_limit"></a>
 
 ## Function `get_cur_microdiem_limit`
@@ -1333,6 +1468,15 @@ Return the current dual attestation limit in microdiem
 <b>ensures</b> result == <a href="DualAttestation.md#0x1_DualAttestation_spec_get_cur_microdiem_limit">spec_get_cur_microdiem_limit</a>();
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_cur_microdiem_limit" calls</summary>
+
+
+![](img/DualAttestation_get_cur_microdiem_limit_call_graph.svg)
 
 
 </details>
@@ -1378,6 +1522,15 @@ The permission UpdateDualAttestationLimit is granted to TreasuryCompliance.
 <b>ensures</b> <b>global</b>&lt;<a href="DualAttestation.md#0x1_DualAttestation_Limit">Limit</a>&gt;(<a href="CoreAddresses.md#0x1_CoreAddresses_DIEM_ROOT_ADDRESS">CoreAddresses::DIEM_ROOT_ADDRESS</a>()).micro_xdx_limit == micro_xdx_limit;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_microdiem_limit" calls</summary>
+
+
+![](img/DualAttestation_set_microdiem_limit_call_graph.svg)
 
 
 </details>

@@ -28,6 +28,24 @@ that the two keys always stay in sync.
 
 
 
+<details>
+<summary>Show all the modules that "SharedEd25519PublicKey" depends on directly or indirectly</summary>
+
+
+![](img/SharedEd25519PublicKey_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "SharedEd25519PublicKey" directly or indirectly</summary>
+
+
+![](img/SharedEd25519PublicKey_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_SharedEd25519PublicKey_SharedEd25519PublicKey"></a>
 
 ## Resource `SharedEd25519PublicKey`
@@ -175,6 +193,15 @@ Aborts if the length of <code>new_public_key</code> is not 32.
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish" calls</summary>
+
+
+![](img/SharedEd25519PublicKey_publish_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_SharedEd25519PublicKey_rotate_key_"></a>
 
 ## Function `rotate_key_`
@@ -247,6 +274,15 @@ Aborts if the length of <code>new_public_key</code> is not 32.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "rotate_key_" calls</summary>
+
+
+![](img/SharedEd25519PublicKey_rotate_key__call_graph.svg)
 
 
 </details>
@@ -327,6 +363,15 @@ Aborts if the length of <code>new_public_key</code> is not 32.
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_key" calls</summary>
+
+
+![](img/SharedEd25519PublicKey_rotate_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_SharedEd25519PublicKey_key"></a>
 
 ## Function `key`
@@ -354,6 +399,15 @@ Aborts if <code>addr</code> does not hold a <code><a href="SharedEd25519PublicKe
 
 </details>
 
+<details>
+<summary>Show all the functions that "key" calls</summary>
+
+
+![](img/SharedEd25519PublicKey_key_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_SharedEd25519PublicKey_exists_at"></a>
 
 ## Function `exists_at`
@@ -375,6 +429,15 @@ Returns true if <code>addr</code> holds a <code><a href="SharedEd25519PublicKey.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "exists_at" calls</summary>
+
+
+![](img/SharedEd25519PublicKey_exists_at_call_graph.svg)
 
 
 </details>

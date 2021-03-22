@@ -21,6 +21,24 @@ Any account that can hold a balance can use the transaction scripts within this 
 
 
 
+<details>
+<summary>Show all the modules that "PaymentScripts" depends on directly or indirectly</summary>
+
+
+![](img/PaymentScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "PaymentScripts" directly or indirectly</summary>
+
+
+![](img/PaymentScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_PaymentScripts_peer_to_peer_with_metadata"></a>
 
 ## Function `peer_to_peer_with_metadata`
@@ -174,6 +192,15 @@ Parent VASPs, and Child VASPs can hold balances [[D1]][ROLE][[D2]][ROLE][[D3]][R
 <b>aborts_if</b> !<b>exists</b>&lt;<a href="DiemAccount.md#0x1_DiemAccount_Balance">DiemAccount::Balance</a>&lt;Currency&gt;&gt;(payee) <b>with</b> <a href="../../../move-stdlib/docs/Errors.md#0x1_Errors_INVALID_ARGUMENT">Errors::INVALID_ARGUMENT</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "peer_to_peer_with_metadata" calls</summary>
+
+
+![](img/PaymentScripts_peer_to_peer_with_metadata_call_graph.svg)
 
 
 </details>

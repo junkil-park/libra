@@ -55,6 +55,24 @@ For a conceptual discussion of roles, see the [DIP-2 document][ACCESS_CONTROL].
 
 
 
+<details>
+<summary>Show all the modules that "Roles" depends on directly or indirectly</summary>
+
+
+![](img/Roles_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "Roles" directly or indirectly</summary>
+
+
+![](img/Roles_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_Roles_RoleId"></a>
 
 ## Resource `RoleId`
@@ -298,6 +316,15 @@ Publishes diem root role. Granted only in genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "grant_diem_root_role" calls</summary>
+
+
+![](img/Roles_grant_diem_root_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_grant_treasury_compliance_role"></a>
 
 ## Function `grant_treasury_compliance_role`
@@ -345,6 +372,15 @@ Publishes treasury compliance role. Granted only in genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "grant_treasury_compliance_role" calls</summary>
+
+
+![](img/Roles_grant_treasury_compliance_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_new_designated_dealer_role"></a>
 
 ## Function `new_designated_dealer_role`
@@ -384,6 +420,15 @@ The <code>creating_account</code> must be treasury compliance.
 <b>include</b> <a href="Roles.md#0x1_Roles_GrantRole">GrantRole</a>{addr: <a href="../../../move-stdlib/docs/Signer.md#0x1_Signer_address_of">Signer::address_of</a>(new_account), role_id: <a href="Roles.md#0x1_Roles_DESIGNATED_DEALER_ROLE_ID">DESIGNATED_DEALER_ROLE_ID</a>};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "new_designated_dealer_role" calls</summary>
+
+
+![](img/Roles_new_designated_dealer_role_call_graph.svg)
 
 
 </details>
@@ -431,6 +476,15 @@ The <code>creating_account</code> must be diem root.
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_validator_role" calls</summary>
+
+
+![](img/Roles_new_validator_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_new_validator_operator_role"></a>
 
 ## Function `new_validator_operator_role`
@@ -470,6 +524,15 @@ The <code>creating_account</code> must be DiemRoot
 <b>include</b> <a href="Roles.md#0x1_Roles_GrantRole">GrantRole</a>{addr: <a href="../../../move-stdlib/docs/Signer.md#0x1_Signer_address_of">Signer::address_of</a>(new_account), role_id: <a href="Roles.md#0x1_Roles_VALIDATOR_OPERATOR_ROLE_ID">VALIDATOR_OPERATOR_ROLE_ID</a>};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "new_validator_operator_role" calls</summary>
+
+
+![](img/Roles_new_validator_operator_role_call_graph.svg)
 
 
 </details>
@@ -517,6 +580,15 @@ The <code>creating_account</code> must be TreasuryCompliance
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_parent_vasp_role" calls</summary>
+
+
+![](img/Roles_new_parent_vasp_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_new_child_vasp_role"></a>
 
 ## Function `new_child_vasp_role`
@@ -556,6 +628,15 @@ The <code>creating_account</code> must be a ParentVASP
 <b>include</b> <a href="Roles.md#0x1_Roles_GrantRole">GrantRole</a>{addr: <a href="../../../move-stdlib/docs/Signer.md#0x1_Signer_address_of">Signer::address_of</a>(new_account), role_id: <a href="Roles.md#0x1_Roles_CHILD_VASP_ROLE_ID">CHILD_VASP_ROLE_ID</a>};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "new_child_vasp_role" calls</summary>
+
+
+![](img/Roles_new_child_vasp_role_call_graph.svg)
 
 
 </details>
@@ -619,6 +700,15 @@ Helper function to grant a role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "grant_role" calls</summary>
+
+
+![](img/Roles_grant_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_has_role"></a>
 
 ## Function `has_role`
@@ -641,6 +731,15 @@ Helper function to grant a role.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_role" calls</summary>
+
+
+![](img/Roles_has_role_call_graph.svg)
 
 
 </details>
@@ -669,6 +768,15 @@ Helper function to grant a role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "has_diem_root_role" calls</summary>
+
+
+![](img/Roles_has_diem_root_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_has_treasury_compliance_role"></a>
 
 ## Function `has_treasury_compliance_role`
@@ -689,6 +797,15 @@ Helper function to grant a role.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_treasury_compliance_role" calls</summary>
+
+
+![](img/Roles_has_treasury_compliance_role_call_graph.svg)
 
 
 </details>
@@ -717,6 +834,15 @@ Helper function to grant a role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "has_designated_dealer_role" calls</summary>
+
+
+![](img/Roles_has_designated_dealer_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_has_validator_role"></a>
 
 ## Function `has_validator_role`
@@ -737,6 +863,15 @@ Helper function to grant a role.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_validator_role" calls</summary>
+
+
+![](img/Roles_has_validator_role_call_graph.svg)
 
 
 </details>
@@ -765,6 +900,15 @@ Helper function to grant a role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "has_validator_operator_role" calls</summary>
+
+
+![](img/Roles_has_validator_operator_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_has_parent_VASP_role"></a>
 
 ## Function `has_parent_VASP_role`
@@ -785,6 +929,15 @@ Helper function to grant a role.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_parent_VASP_role" calls</summary>
+
+
+![](img/Roles_has_parent_VASP_role_call_graph.svg)
 
 
 </details>
@@ -813,6 +966,15 @@ Helper function to grant a role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "has_child_VASP_role" calls</summary>
+
+
+![](img/Roles_has_child_VASP_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_get_role_id"></a>
 
 ## Function `get_role_id`
@@ -834,6 +996,15 @@ Helper function to grant a role.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_role_id" calls</summary>
+
+
+![](img/Roles_get_role_id_call_graph.svg)
 
 
 </details>
@@ -864,6 +1035,15 @@ Return true if <code>addr</code> is allowed to receive and send <code><a href="D
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "can_hold_balance" calls</summary>
+
+
+![](img/Roles_can_hold_balance_call_graph.svg)
 
 
 </details>
@@ -906,6 +1086,15 @@ Assert that the account is diem root.
 <b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotDiemRoot">AbortsIfNotDiemRoot</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_diem_root" calls</summary>
+
+
+![](img/Roles_assert_diem_root_call_graph.svg)
 
 
 </details>
@@ -954,6 +1143,15 @@ Assert that the account is treasury compliance.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_treasury_compliance" calls</summary>
+
+
+![](img/Roles_assert_treasury_compliance_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_assert_parent_vasp_role"></a>
 
 ## Function `assert_parent_vasp_role`
@@ -993,6 +1191,15 @@ Assert that the account has the parent vasp role.
 <b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotParentVasp">AbortsIfNotParentVasp</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_parent_vasp_role" calls</summary>
+
+
+![](img/Roles_assert_parent_vasp_role_call_graph.svg)
 
 
 </details>
@@ -1040,6 +1247,15 @@ Assert that the account has the child vasp role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_child_vasp_role" calls</summary>
+
+
+![](img/Roles_assert_child_vasp_role_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_assert_designated_dealer"></a>
 
 ## Function `assert_designated_dealer`
@@ -1079,6 +1295,15 @@ Assert that the account has the designated dealer role.
 <b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotDesignatedDealer">AbortsIfNotDesignatedDealer</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_designated_dealer" calls</summary>
+
+
+![](img/Roles_assert_designated_dealer_call_graph.svg)
 
 
 </details>
@@ -1126,6 +1351,15 @@ Assert that the account has the validator role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_validator" calls</summary>
+
+
+![](img/Roles_assert_validator_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_assert_validator_operator"></a>
 
 ## Function `assert_validator_operator`
@@ -1165,6 +1399,15 @@ Assert that the account has the validator operator role.
 <b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotValidatorOperator">AbortsIfNotValidatorOperator</a>{validator_operator_addr: <a href="../../../move-stdlib/docs/Signer.md#0x1_Signer_spec_address_of">Signer::spec_address_of</a>(validator_operator_account)};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_validator_operator" calls</summary>
+
+
+![](img/Roles_assert_validator_operator_call_graph.svg)
 
 
 </details>
@@ -1213,6 +1456,15 @@ Assert that the account has either the parent vasp or designated dealer role.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_parent_vasp_or_designated_dealer" calls</summary>
+
+
+![](img/Roles_assert_parent_vasp_or_designated_dealer_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_Roles_assert_parent_vasp_or_child_vasp"></a>
 
 ## Function `assert_parent_vasp_or_child_vasp`
@@ -1252,6 +1504,15 @@ Assert that the account has either the parent vasp or designated dealer role.
 <b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotParentVaspOrChildVasp">AbortsIfNotParentVaspOrChildVasp</a>;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_parent_vasp_or_child_vasp" calls</summary>
+
+
+![](img/Roles_assert_parent_vasp_or_child_vasp_call_graph.svg)
 
 
 </details>

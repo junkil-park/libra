@@ -24,6 +24,24 @@ Stores the string name of a ValidatorOperator account.
 
 
 
+<details>
+<summary>Show all the modules that "ValidatorOperatorConfig" depends on directly or indirectly</summary>
+
+
+![](img/ValidatorOperatorConfig_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "ValidatorOperatorConfig" directly or indirectly</summary>
+
+
+![](img/ValidatorOperatorConfig_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorOperatorConfig_ValidatorOperatorConfig"></a>
 
 ## Resource `ValidatorOperatorConfig`
@@ -136,6 +154,15 @@ The <code><a href="ValidatorOperatorConfig.md#0x1_ValidatorOperatorConfig">Valid
 
 </details>
 
+<details>
+<summary>Show all the functions that "publish" calls</summary>
+
+
+![](img/ValidatorOperatorConfig_publish_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorOperatorConfig_get_human_name"></a>
 
 ## Function `get_human_name`
@@ -177,6 +204,15 @@ Aborts if there is no ValidatorOperatorConfig resource
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_human_name" calls</summary>
+
+
+![](img/ValidatorOperatorConfig_get_human_name_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_ValidatorOperatorConfig_has_validator_operator_config"></a>
 
 ## Function `has_validator_operator_config`
@@ -209,6 +245,15 @@ Aborts if there is no ValidatorOperatorConfig resource
 <pre><code><b>ensures</b> result == <a href="ValidatorOperatorConfig.md#0x1_ValidatorOperatorConfig_has_validator_operator_config">has_validator_operator_config</a>(validator_operator_addr);
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_validator_operator_config" calls</summary>
+
+
+![](img/ValidatorOperatorConfig_has_validator_operator_config_call_graph.svg)
 
 
 </details>

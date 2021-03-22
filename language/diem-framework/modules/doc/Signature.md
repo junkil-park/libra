@@ -14,6 +14,24 @@ Contains functions for [ed25519](https://en.wikipedia.org/wiki/EdDSA) digital si
 
 
 
+<details>
+<summary>Show all the modules that "Signature" depends on directly or indirectly</summary>
+
+
+![](img/Signature_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "Signature" directly or indirectly</summary>
+
+
+![](img/Signature_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_Signature_ed25519_validate_pubkey"></a>
 
 ## Function `ed25519_validate_pubkey`
@@ -37,6 +55,15 @@ Does not abort.
 <pre><code><b>native</b> <b>public</b> <b>fun</b> <a href="Signature.md#0x1_Signature_ed25519_validate_pubkey">ed25519_validate_pubkey</a>(public_key: vector&lt;u8&gt;): bool;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "ed25519_validate_pubkey" calls</summary>
+
+
+![](img/Signature_ed25519_validate_pubkey_call_graph.svg)
 
 
 </details>
@@ -71,6 +98,15 @@ Does not abort.
 ): bool;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "ed25519_verify" calls</summary>
+
+
+![](img/Signature_ed25519_verify_call_graph.svg)
 
 
 </details>

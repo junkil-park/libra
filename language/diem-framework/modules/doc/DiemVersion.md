@@ -25,6 +25,24 @@ DiemConfig, and may be updated by Diem root.
 
 
 
+<details>
+<summary>Show all the modules that "DiemVersion" depends on directly or indirectly</summary>
+
+
+![](img/DiemVersion_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "DiemVersion" directly or indirectly</summary>
+
+
+![](img/DiemVersion_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_DiemVersion_DiemVersion"></a>
 
 ## Struct `DiemVersion`
@@ -116,6 +134,15 @@ Must abort if the signer does not have the DiemRoot role [[H10]][PERMISSION].
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/DiemVersion_initialize_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_DiemVersion_set"></a>
 
 ## Function `set`
@@ -169,6 +196,15 @@ Must abort if the signer does not have the DiemRoot role [[H10]][PERMISSION].
 <b>include</b> <a href="DiemConfig.md#0x1_DiemConfig_SetEnsures">DiemConfig::SetEnsures</a>&lt;<a href="DiemVersion.md#0x1_DiemVersion">DiemVersion</a>&gt;{payload: <a href="DiemVersion.md#0x1_DiemVersion">DiemVersion</a> { major }};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set" calls</summary>
+
+
+![](img/DiemVersion_set_call_graph.svg)
 
 
 </details>

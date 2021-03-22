@@ -44,6 +44,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "AccountCreationScripts" depends on directly or indirectly</summary>
+
+
+![](img/AccountCreationScripts_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "AccountCreationScripts" directly or indirectly</summary>
+
+
+![](img/AccountCreationScripts_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_child_vasp_account"></a>
 
 ## Function `create_child_vasp_account`
@@ -216,6 +234,15 @@ Only Parent VASP accounts can create Child VASP accounts [[A7]][ROLE].
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_child_vasp_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_child_vasp_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_validator_operator_account"></a>
 
 ## Function `create_validator_operator_account`
@@ -343,6 +370,15 @@ Only the Diem Root account can create Validator Operator accounts [[A4]][ROLE].
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotDiemRoot">Roles::AbortsIfNotDiemRoot</a>{account: dr_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_validator_operator_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_validator_operator_account_call_graph.svg)
 
 
 </details>
@@ -481,6 +517,15 @@ Only the Diem Root account can create Validator accounts [[A3]][ROLE].
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_validator_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_validator_account_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_AccountCreationScripts_create_parent_vasp_account"></a>
 
 ## Function `create_parent_vasp_account`
@@ -605,6 +650,15 @@ Only the Treasury Compliance account can create Parent VASP accounts [[A6]][ROLE
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotTreasuryCompliance">Roles::AbortsIfNotTreasuryCompliance</a>{account: tc_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_parent_vasp_account" calls</summary>
+
+
+![](img/AccountCreationScripts_create_parent_vasp_account_call_graph.svg)
 
 
 </details>
@@ -735,6 +789,15 @@ Only the Treasury Compliance account can create Designated Dealer accounts [[A5]
 <pre><code><b>include</b> <a href="Roles.md#0x1_Roles_AbortsIfNotTreasuryCompliance">Roles::AbortsIfNotTreasuryCompliance</a>{account: tc_account};
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_designated_dealer" calls</summary>
+
+
+![](img/AccountCreationScripts_create_designated_dealer_call_graph.svg)
 
 
 </details>
